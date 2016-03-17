@@ -27,7 +27,7 @@ import edu.emory.mathcs.nlp.common.util.DSUtils;
  * @version	1.0
  * @since 	Mar 8, 2016
  */
-public class Utterance implements Serializable{
+public class Utterance implements Serializable, Comparable<Utterance>{
 	private static final long serialVersionUID = -7666651294661709214L;
 	
 	/* Static functions =============================================================== */
@@ -51,33 +51,39 @@ public class Utterance implements Serializable{
 	}
 	
 	/* Class body ===================================================================== */
+	private int utterance_id;
 	private String speaker, utterance_raw, statment_raw;
 	private List<StatementNode[]> statement_trees;
 	
 	
-	public Utterance(String speaker){
-		init(speaker, null, null, null);
+	public Utterance(int utterence_id, String speaker){
+		init(utterence_id, speaker, null, null, null);
 	}
 	
-	public Utterance(String speaker, String utterance){
-		init(speaker, utterance, trimActionNote(utterance), null);
+	public Utterance(int utterence_id, String speaker, String utterance){
+		init(utterence_id, speaker, utterance, trimActionNote(utterance), null);
 	}
 	
-	public Utterance(String speaker, String utterance, String statement){
-		init(speaker, utterance, statement, null);
+	public Utterance(int utterence_id, String speaker, String utterance, String statement){
+		init(utterence_id, speaker, utterance, statement, null);
 	}
 	
-	public Utterance(String speaker, String utterance, String statement, List<StatementNode[]> statement_trees){
-		init(speaker, utterance, statement, statement_trees);
+	public Utterance(int utterence_id, String speaker, String utterance, String statement, List<StatementNode[]> statement_trees){
+		init(utterence_id, speaker, utterance, statement, statement_trees);
 	}
 	
-	private void init(String speaker, String utterance, String statement, List<StatementNode[]> statement_trees){
-		this. speaker = speaker; 
+	private void init(int id, String speaker, String utterance, String statement, List<StatementNode[]> statement_trees){
+		utterance_id = id;
+		this.speaker = speaker; 
 		utterance_raw = utterance;
 		statment_raw = statement;
 		
-		if(statement_trees == null) statement_trees = new ArrayList<>();
-		else						statement_trees = new ArrayList<>(statement_trees);
+		if(statement_trees == null) this.statement_trees = new ArrayList<>();
+		else						this.statement_trees = new ArrayList<>(statement_trees);
+	}
+	
+	public int getID(){
+		return utterance_id;
 	}
 	
 	public String getSpeaker(){
@@ -96,23 +102,33 @@ public class Utterance implements Serializable{
 		return statement_trees;
 	}
 	
-	public void setSpeaker(String speaker){
-		this.speaker = speaker;
+	public int setID(int ID){
+		return this.utterance_id = ID;
 	}
 	
-	public void setUtterance(String utterance){
-		this.utterance_raw = utterance;
+	public String setSpeaker(String speaker){
+		return this.speaker = speaker;
 	}
 	
-	public void setStatement(String statement){
-		this.statment_raw = statement;
+	public String setUtterance(String utterance){
+		return this.utterance_raw = utterance;
 	}
 	
-	public void setStatmentTress(List<StatementNode[]> statement_trees){
-		this.statement_trees = statement_trees;
+	public String setStatement(String statement){
+		return this.statment_raw = statement;
 	}
 	
-	public void addStatementTree(StatementNode[] tree){
+	public List<StatementNode[]> setStatmentTress(List<StatementNode[]> statement_trees){
+		return this.statement_trees = statement_trees;
+	}
+	
+	public StatementNode[] addStatementTree(StatementNode[] tree){
 		statement_trees.add(tree);
+		return tree;
+	}
+
+	@Override
+	public int compareTo(Utterance o) {
+		return getID() - o.getID();
 	}
 }

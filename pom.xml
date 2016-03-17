@@ -33,5 +33,10 @@
 	  <artifactId>nlp4j-english</artifactId>
 	  <version>RELEASE</version>
 	</dependency>
+	<dependency>
+	  <groupId>com.google.code.gson</groupId>
+	  <artifactId>gson</artifactId>
+	  <version>RELEASE</version>
+	</dependency>
   </dependencies>
 </project>

@@ -1,0 +1,983 @@
+0	0	1	There	there	EX	_	2	expl	_	O	O
+0	0	2	's	's	VBZ	_	0	root	_	O	O
+0	0	3	nothing	nothing	NN	_	2	attr	_	O	O
+0	0	4	to	to	TO	_	5	aux	_	O	O
+0	0	5	tell	tell	VB	_	3	relcl	_	O	O
+0	0	6	!	!	.	_	2	punct	_	O	O
+
+0	1	1	He	he	PRP	_	2	nsubj	_	O	U-Paul
+0	1	2	's	's	VBZ	_	0	root	_	O	O
+0	1	3	just	just	RB	_	5	advmod	_	O	O
+0	1	4	some	some	DT	_	5	det	_	O	O
+0	1	5	guy	guy	NN	_	2	attr	_	O	U-Paul
+0	1	6	I	I	PRP	_	7	nsubj	_	O	U-Monica
+0	1	7	work	work	VBP	_	5	relcl	_	O	O
+0	1	8	with	with	IN	_	7	prep	_	O	O
+0	1	9	!	!	.	_	2	punct	_	O	O
+
+1	2	1	C'mon	c'mon	UH	_	5	discourse	_	O	O
+1	2	2	,	,	,	_	5	punct	_	O	O
+1	2	3	you	you	PRP	_	5	nsubj	_	O	U-Monica
+1	2	4	're	be	VBP	_	5	aux	_	O	O
+1	2	5	going	go	VBG	_	0	root	_	O	O
+1	2	6	out	out	RP	_	5	prt	_	O	O
+1	2	7	with	with	IN	_	5	prep	_	O	O
+1	2	8	the	the	DT	_	9	det	_	O	O
+1	2	9	guy	guy	NN	_	7	pobj	_	O	U-Paul
+1	2	10	!	!	.	_	5	punct	_	O	O
+
+1	3	1	There	there	EX	_	3	expl	_	O	O
+1	3	2	's	's	VBZ	_	3	auxpass	_	O	O
+1	3	3	got	get	VBN	_	0	root	_	O	O
+1	3	4	ta	ta	TO	_	5	aux	_	O	O
+1	3	5	be	be	VB	_	3	xcomp	_	O	O
+1	3	6	something	something	NN	_	5	attr	_	O	O
+1	3	7	wrong	wrong	JJ	_	6	nmod	_	O	O
+1	3	8	with	with	IN	_	7	prep	_	O	O
+1	3	9	him	him	PRP	_	8	pobj	_	O	U-Paul
+1	3	10	!	!	.	_	3	punct	_	O	O
+
+2	4	1	All	all	RB	_	2	advmod	_	O	O
+2	4	2	right	right	RB	_	5	advmod	_	O	O
+2	4	3	Joey	joey	NNP	_	5	vocative	_	U-PERSON	U-Joey
+2	4	4	,	,	,	_	5	punct	_	O	O
+2	4	5	be	be	VB	_	0	root	_	O	O
+2	4	6	nice	nice	JJ	_	5	acomp	_	O	O
+2	4	7	.	.	.	_	5	punct	_	O	O
+
+2	5	1	So	so	RB	_	4	advmod	_	O	O
+2	5	2	does	do	VBZ	_	4	aux	_	O	O
+2	5	3	he	he	PRP	_	4	nsubj	_	O	U-Paul
+2	5	4	have	have	VB	_	0	root	_	O	O
+2	5	5	a	a	DT	_	6	det	_	O	O
+2	5	6	hump	hump	NN	_	4	dobj	_	O	O
+2	5	7	?	?	.	_	4	punct	_	O	O
+
+2	6	1	A	a	DT	_	2	det	_	O	O
+2	6	2	hump	hump	NN	_	0	root	_	O	O
+2	6	3	and	and	CC	_	2	cc	_	O	O
+2	6	4	a	a	DT	_	5	det	_	O	O
+2	6	5	hairpiece	hairpiece	NN	_	2	conj	_	O	O
+2	6	6	?	?	.	_	2	punct	_	O	O
+
+3	7	1	Wait	wait	VB	_	5	advcl	_	O	O
+3	7	2	,	,	,	_	5	punct	_	O	O
+3	7	3	does	do	VBZ	_	5	aux	_	O	O
+3	7	4	he	he	PRP	_	5	nsubj	_	O	U-Paul
+3	7	5	eat	eat	VB	_	0	root	_	O	O
+3	7	6	chalk	chalk	NN	_	5	dobj	_	O	O
+3	7	7	?	?	.	_	5	punct	_	O	O
+
+4	8	1	_	_	SYM	_	0	root	_	O	O
+
+5	9	1	Just	just	RB	_	9	advmod	_	O	O
+5	9	2	,	,	,	_	9	punct	_	O	O
+5	9	3	'	'	''	_	1	punct	_	O	O
+5	9	4	cause	cause	VB	_	9	mark	_	O	O
+5	9	5	,	,	,	_	9	punct	_	O	O
+5	9	6	I	I	PRP	_	9	nsubj	_	O	U-Phoebe
+5	9	7	do	do	VBP	_	9	aux	_	O	O
+5	9	8	n't	not	RB	_	9	neg	_	O	O
+5	9	9	want	want	VB	_	0	root	_	O	O
+5	9	10	her	her	PRP	_	12	nsubj	_	O	U-Monica
+5	9	11	to	to	TO	_	12	aux	_	O	O
+5	9	12	go	go	VB	_	9	ccomp	_	O	O
+5	9	13	through	through	IN	_	12	prep	_	O	O
+5	9	14	what	what	WP	_	17	pobj	_	O	O
+5	9	15	I	I	PRP	_	16	nsubj	_	O	U-Phoebe
+5	9	16	went	go	VBD	_	13	pcomp	_	O	O
+5	9	17	through	through	IN	_	16	prep	_	O	O
+5	9	18	with	with	IN	_	16	prep	_	O	O
+5	9	19	Carl	carl	NNP	_	21	compound	_	O	U-Unknown
+5	9	20	-	-	HYPH	_	21	punct	_	O	O
+5	9	21	oh	oh	UH	_	16	discourse	_	O	O
+5	9	22	!	!	.	_	9	punct	_	O	O
+
+6	10	1	Okay	okay	UH	_	4	discourse	_	O	O
+6	10	2	,	,	,	_	4	punct	_	O	O
+6	10	3	everybody	everybody	NN	_	4	nsubj	_	O	O
+6	10	4	relax	relax	VB	_	0	root	_	O	O
+6	10	5	.	.	.	_	4	punct	_	O	O
+
+6	11	1	This	this	DT	_	2	nsubj	_	O	O
+6	11	2	is	be	VBZ	_	0	root	_	O	O
+6	11	3	not	not	RB	_	2	neg	_	O	O
+6	11	4	even	even	RB	_	6	advmod	_	O	O
+6	11	5	a	a	DT	_	6	det	_	O	O
+6	11	6	date	date	NN	_	2	attr	_	O	O
+6	11	7	.	.	.	_	2	punct	_	O	O
+
+6	12	1	It	it	PRP	_	2	nsubj	_	O	O
+6	12	2	's	's	VBZ	_	0	root	_	O	O
+6	12	3	just	just	RB	_	4	advmod	_	O	O
+6	12	4	two	#crd#	CD	_	5	nmod	_	U-CARDINAL	O
+6	12	5	people	people	NNS	_	13	nsubj	_	O	O
+6	12	6	going	go	VBG	_	5	acl	_	O	O
+6	12	7	out	out	RB	_	6	advmod	_	O	O
+6	12	8	to	to	IN	_	6	prep	_	O	O
+6	12	9	dinner	dinner	NN	_	8	pobj	_	O	O
+6	12	10	and	and	CC	_	9	cc	_	O	O
+6	12	11	-	-	HYPH	_	13	punct	_	O	O
+6	12	12	not	not	RB	_	13	neg	_	O	O
+6	12	13	having	have	VBG	_	2	ccomp	_	O	O
+6	12	14	sex	sex	NN	_	13	dobj	_	O	O
+6	12	15	.	.	.	_	2	punct	_	O	O
+
+7	13	1	Sounds	sound	VBZ	_	0	root	_	O	O
+7	13	2	like	like	IN	_	1	prep	_	O	O
+7	13	3	a	a	DT	_	4	det	_	O	O
+7	13	4	date	date	NN	_	2	pobj	_	O	O
+7	13	5	to	to	IN	_	4	prep	_	O	O
+7	13	6	me	me	PRP	_	5	pobj	_	O	U-Chandler
+7	13	7	.	.	.	_	1	punct	_	O	O
+
+8	14	1	_	_	SYM	_	0	root	_	O	O
+
+9	15	1	Alright	alright	UH	_	5	discourse	_	O	O
+9	15	2	,	,	,	_	5	punct	_	O	O
+9	15	3	so	so	RB	_	5	advmod	_	O	O
+9	15	4	I	I	PRP	_	5	nsubj	_	O	U-Chandler
+9	15	5	'm	be	VBP	_	13	ccomp	_	O	O
+9	15	6	back	back	RB	_	5	advmod	_	O	O
+9	15	7	in	in	IN	_	6	prep	_	O	O
+9	15	8	high	high	JJ	_	9	nmod	_	O	O
+9	15	9	school	school	NN	_	7	pobj	_	O	O
+9	15	10	,	,	,	_	13	punct	_	O	O
+9	15	11	I	I	PRP	_	13	nsubj	_	O	U-Chandler
+9	15	12	'm	be	VBP	_	13	aux	_	O	O
+9	15	13	standing	stand	VBG	_	0	root	_	O	O
+9	15	14	in	in	IN	_	13	prep	_	O	O
+9	15	15	the	the	DT	_	16	det	_	O	O
+9	15	16	middle	middle	NN	_	14	pobj	_	O	O
+9	15	17	of	of	IN	_	16	prep	_	O	O
+9	15	18	the	the	DT	_	19	det	_	O	O
+9	15	19	cafeteria	cafeteria	NN	_	17	pobj	_	O	O
+9	15	20	,	,	,	_	13	punct	_	O	O
+9	15	21	and	and	CC	_	13	cc	_	O	O
+9	15	22	I	I	PRP	_	23	nsubj	_	O	U-Chandler
+9	15	23	realize	realize	VBP	_	13	conj	_	O	O
+9	15	24	I	I	PRP	_	25	nsubj	_	O	U-Chandler
+9	15	25	am	be	VBP	_	23	ccomp	_	O	O
+9	15	26	totally	totally	RB	_	27	advmod	_	O	O
+9	15	27	naked	naked	JJ	_	25	acomp	_	O	O
+9	15	28	.	.	.	_	23	punct	_	O	O
+
+10	16	1	Oh	oh	UH	_	3	discourse	_	O	O
+10	16	2	,	,	,	_	3	punct	_	O	O
+10	16	3	yeah	yeah	UH	_	0	root	_	O	O
+10	16	4	.	.	.	_	3	punct	_	O	O
+
+10	17	1	Had	have	VBD	_	0	root	_	O	O
+10	17	2	that	that	DT	_	3	det	_	O	O
+10	17	3	dream	dream	NN	_	1	dobj	_	O	O
+10	17	4	.	.	.	_	1	punct	_	O	O
+
+11	18	1	Then	then	RB	_	3	advmod	_	O	O
+11	18	2	I	I	PRP	_	3	nsubj	_	O	U-Chandler
+11	18	3	look	look	VBP	_	0	root	_	O	O
+11	18	4	down	down	RB	_	3	advmod	_	O	O
+11	18	5	,	,	,	_	3	punct	_	O	O
+11	18	6	and	and	CC	_	3	cc	_	O	O
+11	18	7	I	I	PRP	_	8	nsubj	_	O	U-Chandler
+11	18	8	realize	realize	VBP	_	3	conj	_	O	O
+11	18	9	there	there	EX	_	10	expl	_	O	O
+11	18	10	's	's	VBZ	_	8	ccomp	_	O	O
+11	18	11	a	a	DT	_	12	det	_	O	O
+11	18	12	phone	phone	NN	_	10	attr	_	O	O
+11	18	13	...	..	.	_	8	punct	_	O	O
+
+11	19	1	there	there	RB	_	0	root	_	O	O
+11	19	2	.	.	.	_	1	punct	_	O	O
+
+12	20	1	Instead	instead	RB	_	2	advmod	_	O	O
+12	20	2	of	of	IN	_	0	root	_	O	O
+12	20	3	...?	..?	.	_	2	punct	_	O	O
+
+13	21	1	That	that	DT	_	2	nsubj	_	O	O
+13	21	2	's	's	VBZ	_	0	root	_	O	O
+13	21	3	right	right	JJ	_	2	acomp	_	O	O
+13	21	4	.	.	.	_	2	punct	_	O	O
+
+14	22	1	Never	never	RB	_	2	neg	_	O	O
+14	22	2	had	have	VBD	_	0	root	_	O	O
+14	22	3	that	that	DT	_	4	det	_	O	O
+14	22	4	dream	dream	NN	_	2	dobj	_	O	O
+14	22	5	.	.	.	_	2	punct	_	O	O
+
+15	23	1	No	no	UH	_	0	root	_	O	O
+15	23	2	.	.	.	_	1	punct	_	O	O
+
+16	24	1	All	all	DT	_	8	npadvmod	_	O	O
+16	24	2	of	of	IN	_	1	prep	_	O	O
+16	24	3	a	a	DT	_	4	det	_	O	O
+16	24	4	sudden	sudden	JJ	_	2	pobj	_	O	O
+16	24	5	,	,	,	_	8	punct	_	O	O
+16	24	6	the	the	DT	_	7	det	_	O	O
+16	24	7	phone	phone	NN	_	8	nsubj	_	O	O
+16	24	8	starts	start	VBZ	_	0	root	_	O	O
+16	24	9	to	to	TO	_	10	aux	_	O	O
+16	24	10	ring	ring	VB	_	8	xcomp	_	O	O
+16	24	11	.	.	.	_	8	punct	_	O	O
+
+16	25	1	Now	now	RB	_	5	advmod	_	O	O
+16	25	2	I	I	PRP	_	5	nsubj	_	O	U-Chandler
+16	25	3	do	do	VBP	_	5	aux	_	O	O
+16	25	4	n't	not	RB	_	5	neg	_	O	O
+16	25	5	know	know	VB	_	11	ccomp	_	O	O
+16	25	6	what	what	WP	_	8	dobj	_	O	O
+16	25	7	to	to	TO	_	8	aux	_	O	O
+16	25	8	do	do	VB	_	5	xcomp	_	O	O
+16	25	9	,	,	,	_	11	punct	_	O	O
+16	25	10	everybody	everybody	NN	_	11	nsubj	_	O	O
+16	25	11	starts	start	VBZ	_	0	root	_	O	O
+16	25	12	looking	look	VBG	_	11	xcomp	_	O	O
+16	25	13	at	at	IN	_	12	prep	_	O	O
+16	25	14	me	me	PRP	_	13	pobj	_	O	U-Chandler
+16	25	15	.	.	.	_	11	punct	_	O	O
+
+17	26	1	And	and	CC	_	5	cc	_	O	O
+17	26	2	they	they	PRP	_	5	nsubj	_	O	U-Collective
+17	26	3	were	be	VBD	_	5	aux	_	O	O
+17	26	4	n't	not	RB	_	5	neg	_	O	O
+17	26	5	looking	look	VBG	_	0	root	_	O	O
+17	26	6	at	at	IN	_	5	prep	_	O	O
+17	26	7	you	you	PRP	_	6	pobj	_	O	U-Chandler
+17	26	8	before	before	RB	_	5	advmod	_	O	O
+17	26	9	?!	?!	.	_	5	punct	_	O	O
+
+18	27	1	Finally	finally	RB	_	4	advmod	_	O	O
+18	27	2	,	,	,	_	4	punct	_	O	O
+18	27	3	I	I	PRP	_	4	nsubj	_	O	U-Chandler
+18	27	4	figure	figure	VBP	_	0	root	_	O	O
+18	27	5	I	I	PRP	_	8	nsubj	_	O	U-Chandler
+18	27	6	'd	would	MD	_	8	aux	_	O	O
+18	27	7	better	well	RBR	_	8	advmod	_	O	O
+18	27	8	answer	answer	VB	_	4	ccomp	_	O	O
+18	27	9	it	it	PRP	_	8	dobj	_	O	O
+18	27	10	,	,	,	_	4	punct	_	O	O
+18	27	11	and	and	CC	_	4	cc	_	O	O
+18	27	12	it	it	PRP	_	13	nsubj	_	O	O
+18	27	13	turns	turn	VBZ	_	4	conj	_	O	O
+18	27	14	out	out	RP	_	13	prt	_	O	O
+18	27	15	it	it	PRP	_	16	nsubj	_	O	O
+18	27	16	's	's	VBZ	_	13	ccomp	_	O	O
+18	27	17	my	my	PRP$	_	18	poss	_	O	U-Chandler
+18	27	18	mother	mother	NN	_	16	attr	_	O	U-Unknown
+18	27	19	,	,	,	_	18	punct	_	O	O
+18	27	20	which	which	WDT	_	21	nsubj	_	O	O
+18	27	21	is	be	VBZ	_	18	relcl	_	O	O
+18	27	22	very	very	RB	_	24	advmod	_	O	O
+18	27	23	-	-	HYPH	_	24	punct	_	O	O
+18	27	24	very	very	RB	_	25	advmod	_	O	O
+18	27	25	weird	weird	JJ	_	21	acomp	_	O	O
+18	27	26	,	,	,	_	13	punct	_	O	O
+18	27	27	because	because	IN	_	31	mark	_	O	O
+18	27	28	-	-	:	_	31	punct	_	O	O
+18	27	29	she	she	PRP	_	31	nsubj	_	O	U-Unknown
+18	27	30	never	never	RB	_	31	neg	_	O	O
+18	27	31	calls	call	VBZ	_	13	advcl	_	O	O
+18	27	32	me	me	PRP	_	31	dobj	_	O	U-Chandler
+18	27	33	!	!	.	_	13	punct	_	O	O
+
+19	28	1	_	_	SYM	_	0	root	_	O	O
+
+20	29	1	Hi	hi	UH	_	0	root	_	O	O
+20	29	2	.	.	.	_	1	punct	_	O	O
+
+21	30	1	This	this	DT	_	2	det	_	O	O
+21	30	2	guy	guy	NN	_	3	nsubj	_	O	U-Ross
+21	30	3	says	say	VBZ	_	0	root	_	O	O
+21	30	4	hello	hello	UH	_	3	discourse	_	O	O
+21	30	5	,	,	,	_	7	punct	_	O	O
+21	30	6	I	I	PRP	_	7	nsubj	_	O	U-Joey
+21	30	7	wan	wan	VBP	_	3	ccomp	_	O	O
+21	30	8	na	to	TO	_	9	aux	_	O	O
+21	30	9	kill	kill	VB	_	7	xcomp	_	O	O
+21	30	10	myself	myself	PRP	_	9	dobj	_	O	U-Joey
+21	30	11	.	.	.	_	3	punct	_	O	O
+
+22	31	1	Are	be	VBP	_	0	root	_	O	O
+22	31	2	you	you	PRP	_	1	nsubj	_	O	U-Ross
+22	31	3	okay	okay	UH	_	1	discourse	_	O	O
+22	31	4	,	,	,	_	1	punct	_	O	O
+22	31	5	sweetie	sweetie	NN	_	1	vocative	_	O	U-Ross
+22	31	6	?	?	.	_	1	punct	_	O	O
+
+23	32	1	I	I	PRP	_	3	nsubj	_	O	U-Ross
+23	32	2	just	just	RB	_	3	advmod	_	O	O
+23	32	3	feel	feel	VBP	_	0	root	_	O	O
+23	32	4	like	like	IN	_	6	mark	_	O	O
+23	32	5	someone	someone	NN	_	6	nsubj	_	O	O
+23	32	6	reached	reach	VBD	_	3	advcl	_	O	O
+23	32	7	down	down	RP	_	6	prt	_	O	O
+23	32	8	my	my	PRP$	_	9	poss	_	O	U-Ross
+23	32	9	throat	throat	NN	_	6	dobj	_	O	O
+23	32	10	,	,	,	_	6	punct	_	O	O
+23	32	11	grabbed	grab	VBD	_	6	conj	_	O	O
+23	32	12	my	my	PRP$	_	14	poss	_	O	U-Ross
+23	32	13	small	small	JJ	_	14	nmod	_	O	O
+23	32	14	intestine	intestine	NN	_	11	dobj	_	O	O
+23	32	15	,	,	,	_	11	punct	_	O	O
+23	32	16	pulled	pull	VBD	_	11	conj	_	O	O
+23	32	17	it	it	PRP	_	16	dobj	_	O	O
+23	32	18	out	out	IN	_	16	prep	_	O	O
+23	32	19	of	of	IN	_	18	prep	_	O	O
+23	32	20	my	my	PRP$	_	21	poss	_	O	U-Ross
+23	32	21	mouth	mouth	NN	_	19	pobj	_	O	O
+23	32	22	and	and	CC	_	16	cc	_	O	O
+23	32	23	tied	tie	VBD	_	16	conj	_	O	O
+23	32	24	it	it	PRP	_	23	dobj	_	O	O
+23	32	25	around	around	IN	_	23	prep	_	O	O
+23	32	26	my	my	PRP$	_	27	poss	_	O	U-Ross
+23	32	27	neck	neck	NN	_	25	pobj	_	O	O
+23	32	28	...	..	.	_	3	punct	_	O	O
+
+24	33	1	Cookie	cookie	NN	_	0	root	_	O	O
+24	33	2	?	?	.	_	1	punct	_	O	O
+
+25	34	1	Carol	carol	NNP	_	2	nsubj	_	U-PERSON	U-Unknown
+25	34	2	moved	move	VBD	_	0	root	_	O	O
+25	34	3	her	her	PRP$	_	4	poss	_	O	U-Unknown
+25	34	4	stuff	stuff	NN	_	2	dobj	_	O	O
+25	34	5	out	out	RP	_	2	prt	_	O	O
+25	34	6	today	today	NN	_	2	npadvmod	_	U-DATE	O
+25	34	7	.	.	.	_	2	punct	_	O	O
+
+26	35	1	Ohh	ohh	UH	_	0	root	_	O	O
+26	35	2	.	.	.	_	1	punct	_	O	O
+
+27	36	1	Let	let	VB	_	0	root	_	O	O
+27	36	2	me	me	PRP	_	3	nsubj	_	O	U-Monica
+27	36	3	get	get	VB	_	1	ccomp	_	O	O
+27	36	4	you	you	PRP	_	3	dative	_	O	U-Ross
+27	36	5	some	some	DT	_	6	det	_	O	O
+27	36	6	coffee	coffee	NN	_	3	dobj	_	O	O
+27	36	7	.	.	.	_	1	punct	_	O	O
+
+28	37	1	Thanks	thanks	NNS	_	0	root	_	O	O
+28	37	2	.	.	.	_	1	punct	_	O	O
+
+29	38	1	Ooh	ooh	UH	_	0	root	_	O	O
+29	38	2	!	!	.	_	1	punct	_	O	O
+
+29	39	1	Oh	oh	UH	_	0	root	_	O	O
+29	39	2	!	!	.	_	1	punct	_	O	O
+
+30	40	1	No	no	UH	_	4	discourse	_	O	O
+30	40	2	,	,	,	_	4	punct	_	O	O
+30	40	3	no	no	DT	_	1	discourse	_	O	O
+30	40	4	do	do	VBP	_	0	root	_	O	O
+30	40	5	n't	not	RB	_	4	neg	_	O	O
+30	40	6	!	!	.	_	4	punct	_	O	O
+
+30	41	1	Stop	stop	VB	_	0	root	_	O	O
+30	41	2	cleansing	cleanse	VBG	_	1	xcomp	_	O	O
+30	41	3	my	my	PRP$	_	4	poss	_	O	U-Ross
+30	41	4	aura	aura	NN	_	2	dobj	_	O	O
+30	41	5	!	!	.	_	1	punct	_	O	O
+
+30	42	1	No	no	UH	_	4	discourse	_	O	O
+30	42	2	,	,	,	_	4	punct	_	O	O
+30	42	3	just	just	RB	_	4	advmod	_	O	O
+30	42	4	leave	leave	VB	_	9	ccomp	_	O	O
+30	42	5	my	my	PRP$	_	6	poss	_	O	U-Ross
+30	42	6	aura	aura	NN	_	4	dobj	_	O	O
+30	42	7	alone	alone	RB	_	4	oprd	_	O	O
+30	42	8	,	,	,	_	9	punct	_	O	O
+30	42	9	okay	okay	JJ	_	0	root	_	O	O
+30	42	10	?	?	.	_	9	punct	_	O	O
+
+31	43	1	Fine	fine	JJ	_	0	root	_	O	O
+31	43	2	!	!	.	_	1	punct	_	O	O
+
+31	44	1	Be	be	VB	_	0	root	_	O	O
+31	44	2	murky	murky	JJ	_	1	acomp	_	O	O
+31	44	3	!	!	.	_	1	punct	_	O	O
+
+32	45	1	I	I	PRP	_	3	nsubj	_	O	U-Ross
+32	45	2	'll	will	MD	_	3	aux	_	O	O
+32	45	3	be	be	VB	_	6	ccomp	_	O	O
+32	45	4	fine	fine	JJ	_	3	acomp	_	O	O
+32	45	5	,	,	,	_	6	punct	_	O	O
+32	45	6	alright	alright	JJ	_	0	root	_	O	O
+32	45	7	?	?	.	_	6	punct	_	O	O
+
+32	46	1	Really	really	RB	_	3	advmod	_	O	O
+32	46	2	,	,	,	_	3	punct	_	O	O
+32	46	3	everyone	everyone	NN	_	0	root	_	O	O
+32	46	4	.	.	.	_	3	punct	_	O	O
+
+32	47	1	I	I	PRP	_	2	nsubj	_	O	U-Ross
+32	47	2	hope	hope	VBP	_	0	root	_	O	O
+32	47	3	she	she	PRP	_	5	nsubj	_	O	U-Unknown
+32	47	4	'll	will	MD	_	5	aux	_	O	O
+32	47	5	be	be	VB	_	2	ccomp	_	O	O
+32	47	6	very	very	RB	_	7	advmod	_	O	O
+32	47	7	happy	happy	JJ	_	5	acomp	_	O	O
+32	47	8	.	.	.	_	2	punct	_	O	O
+
+33	48	1	No	no	UH	_	3	discourse	_	O	O
+33	48	2	you	you	PRP	_	3	nsubj	_	O	U-Ross
+33	48	3	do	do	VBP	_	0	root	_	O	O
+33	48	4	n't	not	RB	_	3	neg	_	O	O
+33	48	5	.	.	.	_	3	punct	_	O	O
+
+34	49	1	No	no	UH	_	12	discourse	_	O	O
+34	49	2	I	I	PRP	_	12	nsubj	_	O	U-Ross
+34	49	3	do	do	VBP	_	12	ccomp	_	O	O
+34	49	4	n't	not	RB	_	3	neg	_	O	O
+34	49	5	,	,	,	_	3	punct	_	O	O
+34	49	6	to	to	IN	_	3	prep	_	O	O
+34	49	7	hell	hell	NN	_	6	pobj	_	O	O
+34	49	8	with	with	IN	_	12	prep	_	O	O
+34	49	9	her	her	PRP	_	8	pobj	_	O	U-Unknown
+34	49	10	,	,	,	_	12	punct	_	O	O
+34	49	11	she	she	PRP	_	12	nsubj	_	O	U-Unknown
+34	49	12	left	leave	VBD	_	0	root	_	O	O
+34	49	13	me	me	PRP	_	12	dobj	_	O	U-Ross
+34	49	14	!	!	.	_	12	punct	_	O	O
+
+35	50	1	And	and	CC	_	4	cc	_	O	O
+35	50	2	you	you	PRP	_	4	nsubj	_	O	U-Ross
+35	50	3	never	never	RB	_	4	neg	_	O	O
+35	50	4	knew	know	VBD	_	0	root	_	O	O
+35	50	5	she	she	PRP	_	6	nsubj	_	O	U-Unknown
+35	50	6	was	be	VBD	_	4	ccomp	_	O	O
+35	50	7	a	a	DT	_	8	det	_	O	O
+35	50	8	lesbian	lesbian	JJ	_	6	attr	_	O	O
+35	50	9	...	..	.	_	4	punct	_	O	O
+
+36	51	1	No	no	DT	_	0	root	_	O	O
+36	51	2	!!	!!	.	_	1	punct	_	O	O
+
+36	52	1	Okay	okay	UH	_	0	root	_	O	O
+36	52	2	?!	?!	.	_	1	punct	_	O	O
+
+36	53	1	Why	why	WRB	_	4	advmod	_	O	O
+36	53	2	does	do	VBZ	_	4	aux	_	O	O
+36	53	3	everyone	everyone	NN	_	4	nsubj	_	O	O
+36	53	4	keep	keep	VB	_	0	root	_	O	O
+36	53	5	fixating	fixate	VBG	_	4	xcomp	_	O	O
+36	53	6	on	on	IN	_	5	prep	_	O	O
+36	53	7	that	that	DT	_	6	pobj	_	O	O
+36	53	8	?	?	.	_	4	punct	_	O	O
+
+36	54	1	She	she	PRP	_	4	nsubj	_	O	U-Unknown
+36	54	2	did	do	VBD	_	4	aux	_	O	O
+36	54	3	n't	not	RB	_	4	neg	_	O	O
+36	54	4	know	know	VB	_	9	ccomp	_	O	O
+36	54	5	,	,	,	_	9	punct	_	O	O
+36	54	6	how	how	WRB	_	9	advmod	_	O	O
+36	54	7	should	should	MD	_	9	aux	_	O	O
+36	54	8	I	I	PRP	_	9	nsubj	_	O	U-Ross
+36	54	9	know	know	VB	_	0	root	_	O	O
+36	54	10	?	?	.	_	9	punct	_	O	O
+
+37	55	1	Sometimes	sometimes	RB	_	3	advmod	_	O	O
+37	55	2	I	I	PRP	_	3	nsubj	_	O	U-Chandler
+37	55	3	wish	wish	VBP	_	0	root	_	O	O
+37	55	4	I	I	PRP	_	5	nsubj	_	O	U-Chandler
+37	55	5	was	be	VBD	_	3	ccomp	_	O	O
+37	55	6	a	a	DT	_	7	det	_	O	O
+37	55	7	lesbian	lesbian	JJ	_	5	attr	_	O	O
+37	55	8	...	..	.	_	3	punct	_	O	O
+
+37	56	1	Did	do	VBD	_	3	aux	_	O	O
+37	56	2	I	I	PRP	_	3	nsubj	_	O	U-Chandler
+37	56	3	say	say	VB	_	0	root	_	O	O
+37	56	4	that	that	DT	_	6	advmod	_	O	O
+37	56	5	out	out	RB	_	6	advmod	_	O	O
+37	56	6	loud	loud	JJ	_	3	ccomp	_	O	O
+37	56	7	?	?	.	_	3	punct	_	O	O
+
+38	57	1	I	I	PRP	_	2	nsubj	_	O	U-Ross
+38	57	2	told	tell	VBD	_	0	root	_	O	O
+38	57	3	mom	mom	NN	_	2	dobj	_	O	U-Unknown
+38	57	4	and	and	CC	_	3	cc	_	O	O
+38	57	5	dad	dad	NN	_	3	conj	_	O	U-Unknown
+38	57	6	last	last	JJ	_	7	nmod	_	B-TIME	O
+38	57	7	night	night	NN	_	2	npadvmod	_	L-TIME	O
+38	57	8	,	,	,	_	10	punct	_	O	O
+38	57	9	they	they	PRP	_	10	nsubj	_	O	U-Collective
+38	57	10	seemed	seem	VBD	_	2	conj	_	O	O
+38	57	11	to	to	TO	_	12	aux	_	O	O
+38	57	12	take	take	VB	_	10	xcomp	_	O	O
+38	57	13	it	it	PRP	_	12	dobj	_	O	O
+38	57	14	pretty	pretty	RB	_	15	advmod	_	O	O
+38	57	15	well	well	RB	_	12	advmod	_	O	O
+38	57	16	.	.	.	_	10	punct	_	O	O
+
+39	58	1	Oh	oh	UH	_	2	discourse	_	O	O
+39	58	2	really	really	RB	_	23	advmod	_	O	O
+39	58	3	,	,	,	_	29	punct	_	O	O
+39	58	4	so	so	IN	_	23	mark	_	O	O
+39	58	5	that	that	DT	_	8	det	_	O	O
+39	58	6	hysterical	hysterical	JJ	_	8	nmod	_	O	O
+39	58	7	phone	phone	NN	_	8	compound	_	O	O
+39	58	8	call	call	NN	_	23	nsubj	_	O	O
+39	58	9	I	I	PRP	_	10	nsubj	_	O	U-Monica
+39	58	10	got	get	VBD	_	8	relcl	_	O	O
+39	58	11	from	from	IN	_	10	prep	_	O	O
+39	58	12	a	a	DT	_	13	det	_	O	O
+39	58	13	woman	woman	NN	_	11	pobj	_	O	U-Unknown
+39	58	14	at	at	IN	_	13	prep	_	O	O
+39	58	15	sobbing	sob	VBG	_	14	pcomp	_	O	O
+39	58	16	3:00	0	CD	_	17	nmod	_	B-TIME	O
+39	58	17	A.M.	a.m.	NN	_	15	dobj	_	L-TIME	O
+39	58	18	,	,	,	_	23	punct	_	O	O
+39	58	19	"	"	``	_	23	punct	_	O	O
+39	58	20	I	I	PRP	_	23	nsubj	_	O	U-Unknown
+39	58	21	'll	will	MD	_	23	aux	_	O	O
+39	58	22	never	never	RB	_	23	neg	_	O	O
+39	58	23	have	have	VB	_	29	advcl	_	O	O
+39	58	24	grandchildren	grandchild	NNS	_	23	dobj	_	O	O
+39	58	25	,	,	,	_	29	punct	_	O	O
+39	58	26	I	I	PRP	_	29	nsubj	_	O	U-Unknown
+39	58	27	'll	will	MD	_	29	aux	_	O	O
+39	58	28	never	never	RB	_	29	neg	_	O	O
+39	58	29	have	have	VB	_	0	root	_	O	O
+39	58	30	grandchildren	grandchild	NNS	_	29	dobj	_	O	O
+39	58	31	.	.	.	_	29	punct	_	O	O
+39	58	32	"	"	''	_	29	punct	_	O	O
+
+39	59	1	was	be	VBD	_	0	root	_	O	O
+39	59	2	what	what	WP	_	1	nsubj	_	O	O
+39	59	3	?	?	.	_	1	punct	_	O	O
+
+39	60	1	A	a	DT	_	3	det	_	O	O
+39	60	2	wrong	wrong	JJ	_	3	nmod	_	O	O
+39	60	3	number	number	NN	_	0	root	_	O	O
+39	60	4	?	?	.	_	3	punct	_	O	O
+
+40	61	1	Sorry	sorry	UH	_	0	root	_	O	O
+40	61	2	.	.	.	_	1	punct	_	O	O
+
+41	62	1	Alright	alright	UH	_	4	discourse	_	O	O
+41	62	2	Ross	ross	NNP	_	4	vocative	_	U-PERSON	U-Ross
+41	62	3	,	,	,	_	4	punct	_	O	O
+41	62	4	look	look	VB	_	0	root	_	O	O
+41	62	5	.	.	.	_	4	punct	_	O	O
+
+41	63	1	You	you	PRP	_	3	nsubj	_	O	U-Ross
+41	63	2	're	be	VBP	_	3	aux	_	O	O
+41	63	3	feeling	feel	VBG	_	0	root	_	O	O
+41	63	4	a	a	DT	_	5	det	_	O	O
+41	63	5	lot	lot	NN	_	3	dobj	_	O	O
+41	63	6	of	of	IN	_	5	prep	_	O	O
+41	63	7	pain	pain	NN	_	6	pobj	_	O	O
+41	63	8	right	right	RB	_	9	advmod	_	O	O
+41	63	9	now	now	RB	_	3	advmod	_	O	O
+41	63	10	.	.	.	_	3	punct	_	O	O
+
+41	64	1	You	you	PRP	_	2	nsubj	_	O	U-Ross
+41	64	2	're	be	VBP	_	0	root	_	O	O
+41	64	3	angry	angry	JJ	_	2	acomp	_	O	O
+41	64	4	.	.	.	_	2	punct	_	O	O
+
+41	65	1	You	you	PRP	_	3	nsubj	_	O	U-Ross
+41	65	2	're	be	VBP	_	3	aux	_	O	O
+41	65	3	hurting	hurt	VBG	_	0	root	_	O	O
+41	65	4	.	.	.	_	3	punct	_	O	O
+
+41	66	1	Can	can	MD	_	3	aux	_	O	O
+41	66	2	I	I	PRP	_	3	nsubj	_	O	U-Joey
+41	66	3	tell	tell	VB	_	0	root	_	O	O
+41	66	4	you	you	PRP	_	3	dobj	_	O	U-Ross
+41	66	5	what	what	WP	_	8	attr	_	O	O
+41	66	6	the	the	DT	_	7	det	_	O	O
+41	66	7	answer	answer	NN	_	8	nsubj	_	O	O
+41	66	8	is	be	VBZ	_	3	ccomp	_	O	O
+41	66	9	?	?	.	_	3	punct	_	O	O
+
+42	67	1	_	_	SYM	_	0	root	_	O	O
+
+43	68	1	Strip	strip	VB	_	2	compound	_	O	O
+43	68	2	joint	joint	JJ	_	0	root	_	O	O
+43	68	3	!	!	.	_	2	punct	_	O	O
+
+43	69	1	C'mon	c'mon	UH	_	4	discourse	_	O	O
+43	69	2	,	,	,	_	4	punct	_	O	O
+43	69	3	you	you	PRP	_	4	nsubj	_	O	U-Ross
+43	69	4	're	be	VBP	_	0	root	_	O	O
+43	69	5	single	single	JJ	_	4	acomp	_	O	O
+43	69	6	!	!	.	_	4	punct	_	O	O
+
+43	70	1	Have	have	VBP	_	0	root	_	O	O
+43	70	2	some	some	DT	_	3	det	_	O	O
+43	70	3	hormones	hormone	NNS	_	1	dobj	_	O	O
+43	70	4	!	!	.	_	1	punct	_	O	O
+
+44	71	1	I	I	PRP	_	4	nsubj	_	O	U-Ross
+44	71	2	do	do	VBP	_	4	aux	_	O	O
+44	71	3	n't	not	RB	_	4	neg	_	O	O
+44	71	4	want	want	VB	_	9	ccomp	_	O	O
+44	71	5	to	to	TO	_	6	aux	_	O	O
+44	71	6	be	be	VB	_	4	xcomp	_	O	O
+44	71	7	single	single	JJ	_	6	acomp	_	O	O
+44	71	8	,	,	,	_	9	punct	_	O	O
+44	71	9	okay	okay	JJ	_	0	root	_	O	O
+44	71	10	?	?	.	_	9	punct	_	O	O
+
+44	72	1	I	I	PRP	_	0	root	_	O	U-Ross
+44	72	2	just	just	RB	_	1	advmod	_	O	O
+44	72	3	...	..	.	_	1	punct	_	O	O
+
+44	73	1	I	I	PRP	_	6	nsubj	_	O	U-Ross
+44	73	2	just	just	RB	_	6	advmod	_	O	O
+44	73	3	-	-	:	_	6	punct	_	O	O
+44	73	4	I	I	PRP	_	6	nsubj	_	O	U-Ross
+44	73	5	just	just	RB	_	6	advmod	_	O	O
+44	73	6	wan	wan	VBP	_	0	root	_	O	O
+44	73	7	na	to	TO	_	9	aux	_	O	O
+44	73	8	be	be	VB	_	9	auxpass	_	O	O
+44	73	9	married	marry	VBN	_	6	xcomp	_	O	O
+44	73	10	again	again	RB	_	9	advmod	_	O	O
+44	73	11	!	!	.	_	6	punct	_	O	O
+
+45	74	1	_	_	SYM	_	0	root	_	O	O
+
+46	75	1	And	and	CC	_	4	cc	_	O	O
+46	75	2	I	I	PRP	_	4	nsubj	_	O	U-Chandler
+46	75	3	just	just	RB	_	4	advmod	_	O	O
+46	75	4	want	want	VBP	_	0	root	_	O	O
+46	75	5	a	a	DT	_	6	qmod	_	B-MONEY	O
+46	75	6	million	#crd#	CD	_	7	nmod	_	I-MONEY	O
+46	75	7	dollars	dollar	NNS	_	4	dobj	_	L-MONEY	O
+46	75	8	!	!	.	_	4	punct	_	O	O
+
+47	76	1	Rachel	rachel	NNP	_	0	root	_	U-PERSON	O
+47	76	2	?!	?!	.	_	1	punct	_	O	O
+
+48	77	1	Oh	oh	UH	_	0	root	_	O	O
+48	77	2	God	god	NNP	_	1	discourse	_	O	O
+48	77	3	Monica	monica	NNP	_	2	appos	_	U-PERSON	O
+48	77	4	hi	hi	UH	_	2	discourse	_	O	O
+48	77	5	!	!	.	_	1	punct	_	O	O
+
+48	78	1	Thank	thank	VBP	_	0	root	_	O	O
+48	78	2	God	god	NNP	_	1	dobj	_	O	O
+48	78	3	!	!	.	_	1	punct	_	O	O
+
+48	79	1	I	I	PRP	_	3	nsubj	_	O	U-Rachel
+48	79	2	just	just	RB	_	3	advmod	_	O	O
+48	79	3	went	go	VBD	_	0	root	_	O	O
+48	79	4	to	to	IN	_	3	prep	_	O	O
+48	79	5	your	your	PRP$	_	6	poss	_	O	U-Monica
+48	79	6	building	building	NN	_	4	pobj	_	O	O
+48	79	7	and	and	CC	_	3	cc	_	O	O
+48	79	8	you	you	PRP	_	9	nsubj	_	O	U-Monica
+48	79	9	were	be	VBD	_	3	conj	_	O	O
+48	79	10	n't	not	RB	_	9	neg	_	O	O
+48	79	11	there	there	RB	_	9	advmod	_	O	O
+48	79	12	and	and	CC	_	9	cc	_	O	O
+48	79	13	then	then	RB	_	20	advmod	_	O	O
+48	79	14	this	this	DT	_	15	det	_	O	O
+48	79	15	guy	guy	NN	_	20	nsubj	_	O	U-Unknown
+48	79	16	with	with	IN	_	15	prep	_	O	O
+48	79	17	a	a	DT	_	19	det	_	O	O
+48	79	18	big	big	JJ	_	19	nmod	_	O	O
+48	79	19	hammer	hammer	NN	_	16	pobj	_	O	O
+48	79	20	said	say	VBD	_	9	conj	_	O	O
+48	79	21	you	you	PRP	_	23	nsubj	_	O	U-Monica
+48	79	22	might	might	MD	_	23	aux	_	O	O
+48	79	23	be	be	VB	_	20	ccomp	_	O	O
+48	79	24	here	here	RB	_	23	advmod	_	O	O
+48	79	25	and	and	CC	_	23	cc	_	O	O
+48	79	26	you	you	PRP	_	27	nsubj	_	O	U-Monica
+48	79	27	are	be	VBP	_	23	conj	_	O	O
+48	79	28	,	,	,	_	27	punct	_	O	O
+48	79	29	you	you	PRP	_	30	nsubj	_	O	U-Monica
+48	79	30	are	be	VBP	_	27	parataxis	_	O	O
+48	79	31	!	!	.	_	20	punct	_	O	O
+
+49	80	1	Can	can	MD	_	3	aux	_	O	O
+49	80	2	I	I	PRP	_	3	nsubj	_	O	U-Waitress
+49	80	3	get	get	VB	_	0	root	_	O	O
+49	80	4	you	you	PRP	_	3	dative	_	O	U-Collective
+49	80	5	some	some	DT	_	6	det	_	O	O
+49	80	6	coffee	coffee	NN	_	3	dobj	_	O	O
+49	80	7	?	?	.	_	3	punct	_	O	O
+
+50	81	1	De-caff	de-caff	LS	_	0	root	_	O	O
+50	81	2	.	.	.	_	1	punct	_	O	O
+
+50	82	1	Okay	okay	UH	_	6	discourse	_	O	O
+50	82	2	,	,	,	_	6	punct	_	O	O
+50	82	3	everybody	everybody	NN	_	1	vocative	_	O	O
+50	82	4	,	,	,	_	6	punct	_	O	O
+50	82	5	this	this	DT	_	6	nsubj	_	O	O
+50	82	6	is	be	VBZ	_	0	root	_	O	O
+50	82	7	Rachel	rachel	NNP	_	6	attr	_	U-PERSON	O
+50	82	8	,	,	,	_	7	punct	_	O	O
+50	82	9	another	another	DT	_	12	det	_	O	O
+50	82	10	Lincoln	lincoln	NNP	_	11	compound	_	U-ORG	O
+50	82	11	High	high	NNP	_	12	compound	_	O	O
+50	82	12	survivor	survivor	NN	_	7	appos	_	O	O
+50	82	13	.	.	.	_	6	punct	_	O	O
+
+50	83	1	This	this	DT	_	2	nsubj	_	O	O
+50	83	2	is	be	VBZ	_	6	ccomp	_	O	O
+50	83	3	everybody	everybody	NN	_	2	attr	_	O	O
+50	83	4	,	,	,	_	6	punct	_	O	O
+50	83	5	this	this	DT	_	6	nsubj	_	O	O
+50	83	6	is	be	VBZ	_	0	root	_	O	O
+50	83	7	Chandler	chandler	NNP	_	6	attr	_	U-PERSON	U-Chandler
+50	83	8	,	,	,	_	6	punct	_	O	O
+50	83	9	and	and	CC	_	6	cc	_	O	O
+50	83	10	Phoebe	phoebe	NNP	_	18	vocative	_	U-PERSON	U-Phoebe
+50	83	11	,	,	,	_	10	punct	_	O	O
+50	83	12	and	and	CC	_	10	cc	_	O	O
+50	83	13	Joey	joey	NNP	_	10	conj	_	U-PERSON	U-Joey
+50	83	14	,	,	,	_	6	punct	_	O	O
+50	83	15	and	and	CC	_	6	cc	_	O	O
+50	83	16	-	-	,	_	18	punct	_	O	O
+50	83	17	you	you	PRP	_	18	nsubj	_	O	U-Rachel
+50	83	18	remember	remember	VBP	_	6	conj	_	O	O
+50	83	19	my	my	PRP$	_	20	poss	_	O	U-Monica
+50	83	20	brother	brother	NN	_	18	dobj	_	O	U-Ross
+50	83	21	Ross	ross	NNP	_	20	appos	_	U-PERSON	U-Ross
+50	83	22	?	?	.	_	18	punct	_	O	O
+
+51	84	1	Hi	hi	UH	_	0	root	_	O	O
+51	84	2	,	,	,	_	1	punct	_	O	O
+51	84	3	sure	sure	JJ	_	1	vocative	_	O	O
+51	84	4	!	!	.	_	1	punct	_	O	O
+
+52	85	1	Hi	hi	UH	_	0	root	_	O	O
+52	85	2	.	.	.	_	1	punct	_	O	O
+
+53	86	1	_	_	SYM	_	0	root	_	O	O
+
+54	87	1	So	so	RB	_	3	advmod	_	O	O
+54	87	2	you	you	PRP	_	3	nsubj	_	O	U-Rachel
+54	87	3	wan	wan	VBP	_	0	root	_	O	O
+54	87	4	na	to	TO	_	5	aux	_	O	O
+54	87	5	tell	tell	VB	_	3	xcomp	_	O	O
+54	87	6	us	us	PRP	_	5	dobj	_	O	U-Collective
+54	87	7	now	now	RB	_	5	advmod	_	O	O
+54	87	8	,	,	,	_	3	punct	_	O	O
+54	87	9	or	or	CC	_	3	cc	_	O	O
+54	87	10	are	be	VBP	_	12	aux	_	O	O
+54	87	11	we	we	PRP	_	12	nsubj	_	O	U-Collective
+54	87	12	waiting	wait	VBG	_	3	conj	_	O	O
+54	87	13	for	for	IN	_	12	prep	_	O	O
+54	87	14	four	#crd#	CD	_	16	nmod	_	U-CARDINAL	O
+54	87	15	wet	wet	JJ	_	16	nmod	_	O	O
+54	87	16	bridesmaids	bridesmaid	NNS	_	13	pobj	_	O	O
+54	87	17	?	?	.	_	12	punct	_	O	O
+
+55	88	1	Oh	oh	UH	_	2	discourse	_	O	O
+55	88	2	God	god	NNP	_	0	root	_	O	O
+55	88	3	...	..	.	_	2	punct	_	O	O
+
+55	89	1	well	well	UH	_	4	discourse	_	O	O
+55	89	2	,	,	,	_	4	punct	_	O	O
+55	89	3	it	it	PRP	_	4	nsubj	_	O	O
+55	89	4	started	start	VBD	_	0	root	_	O	O
+55	89	5	about	about	RB	_	7	advmod	_	B-TIME	O
+55	89	6	a	a	DT	_	7	qmod	_	I-TIME	O
+55	89	7	half	half	JJ	_	8	nmod	_	I-TIME	O
+55	89	8	hour	hour	NN	_	4	npadvmod	_	L-TIME	O
+55	89	9	before	before	IN	_	4	prep	_	O	O
+55	89	10	the	the	DT	_	11	det	_	O	O
+55	89	11	wedding	wedding	NN	_	9	pobj	_	O	O
+55	89	12	.	.	.	_	4	punct	_	O	O
+
+55	90	1	I	I	PRP	_	2	nsubj	_	O	U-Rachel
+55	90	2	was	be	VBD	_	0	root	_	O	O
+55	90	3	in	in	IN	_	2	prep	_	O	O
+55	90	4	the	the	DT	_	5	det	_	O	O
+55	90	5	room	room	NN	_	3	pobj	_	O	O
+55	90	6	where	where	WRB	_	9	advmod	_	O	O
+55	90	7	we	we	PRP	_	9	nsubj	_	O	U-Collective
+55	90	8	were	be	VBD	_	9	aux	_	O	O
+55	90	9	keeping	keep	VBG	_	5	relcl	_	O	O
+55	90	10	all	all	PDT	_	12	predet	_	O	O
+55	90	11	the	the	DT	_	12	det	_	O	O
+55	90	12	presents	present	NNS	_	9	dobj	_	O	O
+55	90	13	,	,	,	_	2	punct	_	O	O
+55	90	14	and	and	CC	_	2	cc	_	O	O
+55	90	15	I	I	PRP	_	17	nsubj	_	O	U-Rachel
+55	90	16	was	be	VBD	_	17	aux	_	O	O
+55	90	17	looking	look	VBG	_	2	conj	_	O	O
+55	90	18	at	at	IN	_	17	prep	_	O	O
+55	90	19	this	this	DT	_	21	det	_	O	O
+55	90	20	gravy	gravy	NN	_	21	compound	_	O	O
+55	90	21	boat	boat	NN	_	18	pobj	_	O	O
+55	90	22	.	.	.	_	17	punct	_	O	O
+
+55	91	1	This	this	DT	_	6	det	_	O	O
+55	91	2	really	really	RB	_	3	advmod	_	O	O
+55	91	3	gorgeous	gorgeous	JJ	_	6	nmod	_	O	O
+55	91	4	Lamauge	lamauge	NNP	_	6	compound	_	U-NORP	O
+55	91	5	gravy	gravy	NN	_	6	compound	_	O	O
+55	91	6	boat	boat	NN	_	0	root	_	O	O
+55	91	7	.	.	.	_	6	punct	_	O	O
+
+55	92	1	When	when	WRB	_	5	advmod	_	O	O
+55	92	2	all	all	DT	_	0	root	_	O	O
+55	92	3	of	of	IN	_	2	prep	_	O	O
+55	92	4	a	a	DT	_	9	det	_	O	O
+55	92	5	sudden	sudden	JJ	_	7	nmod	_	O	O
+55	92	6	-	-	HYPH	_	7	punct	_	O	O
+55	92	7	Sweet	sweet	NNP	_	9	nmod	_	O	O
+55	92	8	'	'	''	_	9	punct	_	O	O
+55	92	9	n	n	NN	_	3	pobj	_	O	O
+55	92	10	'	'	''	_	9	punct	_	O	O
+55	92	11	Lo	lo	NNP	_	9	appos	_	U-PERSON	O
+55	92	12	?	?	.	_	11	predet	_	O	O
+
+55	93	1	-	-	SYM	_	3	punct	_	O	O
+55	93	2	I	I	PRP	_	3	nsubj	_	O	U-Rachel
+55	93	3	realized	realize	VBD	_	0	root	_	O	O
+55	93	4	that	that	IN	_	6	mark	_	O	O
+55	93	5	I	I	PRP	_	6	nsubj	_	O	U-Rachel
+55	93	6	was	be	VBD	_	3	ccomp	_	O	O
+55	93	7	more	more	RBR	_	8	advmod	_	O	O
+55	93	8	turned	turn	VBN	_	6	acomp	_	O	O
+55	93	9	on	on	RP	_	8	prt	_	O	O
+55	93	10	by	by	IN	_	8	agent	_	O	O
+55	93	11	this	this	DT	_	13	det	_	O	O
+55	93	12	gravy	gravy	NN	_	13	compound	_	O	O
+55	93	13	boat	boat	NN	_	10	pobj	_	O	O
+55	93	14	than	than	IN	_	8	prep	_	O	O
+55	93	15	by	by	IN	_	14	prep	_	O	O
+55	93	16	Barry	barry	NNP	_	15	pobj	_	U-PERSON	U-Unknown
+55	93	17	!	!	.	_	3	punct	_	O	O
+
+55	94	1	And	and	CC	_	6	cc	_	O	O
+55	94	2	then	then	RB	_	6	advmod	_	O	O
+55	94	3	I	I	PRP	_	6	nsubjpass	_	O	U-Rachel
+55	94	4	got	get	VBD	_	6	auxpass	_	O	O
+55	94	5	really	really	RB	_	6	advmod	_	O	O
+55	94	6	freaked	freak	VBN	_	0	root	_	O	O
+55	94	7	out	out	RP	_	6	prt	_	O	O
+55	94	8	,	,	,	_	6	punct	_	O	O
+55	94	9	and	and	CC	_	6	cc	_	O	O
+55	94	10	that	that	DT	_	11	nsubj	_	O	O
+55	94	11	's	's	VBZ	_	6	conj	_	O	O
+55	94	12	when	when	WRB	_	14	advmod	_	O	O
+55	94	13	it	it	PRP	_	14	nsubj	_	O	O
+55	94	14	hit	hit	VBD	_	11	advcl	_	O	O
+55	94	15	me	me	PRP	_	14	dobj	_	O	U-Rachel
+55	94	16	:	:	:	_	11	punct	_	O	O
+55	94	17	how	how	WRB	_	18	advmod	_	O	O
+55	94	18	much	much	JJ	_	20	advmod	_	O	O
+55	94	19	Barry	barry	NNP	_	20	nsubj	_	U-PERSON	U-Unknown
+55	94	20	looks	look	VBZ	_	11	ccomp	_	O	O
+55	94	21	like	like	IN	_	20	prep	_	O	O
+55	94	22	Mr.	mr.	NNP	_	24	compound	_	O	O
+55	94	23	Potato	potato	NNP	_	24	compound	_	B-PERSON	O
+55	94	24	Head	head	NNP	_	21	pobj	_	L-PERSON	O
+55	94	25	.	.	.	_	11	punct	_	O	O
+
+55	95	1	Y'know	y'know	UH	_	8	discourse	_	O	O
+55	95	2	,	,	,	_	8	punct	_	O	O
+55	95	3	I	I	PRP	_	4	nsubj	_	O	U-Rachel
+55	95	4	mean	mean	VBP	_	8	parataxis	_	O	O
+55	95	5	,	,	,	_	8	punct	_	O	O
+55	95	6	I	I	PRP	_	8	nsubj	_	O	U-Rachel
+55	95	7	always	always	RB	_	8	advmod	_	O	O
+55	95	8	knew	know	VBD	_	0	root	_	O	O
+55	95	9	looked	look	VBD	_	8	ccomp	_	O	O
+55	95	10	familiar	familiar	JJ	_	9	acomp	_	O	O
+55	95	11	,	,	,	_	8	punct	_	O	O
+55	95	12	but	but	CC	_	8	cc	_	O	O
+55	95	13	...	..	.	_	8	punct	_	O	O
+
+55	96	1	Anyway	anyway	UH	_	5	discourse	_	O	O
+55	96	2	,	,	,	_	5	punct	_	O	O
+55	96	3	I	I	PRP	_	5	nsubj	_	O	U-Rachel
+55	96	4	just	just	RB	_	5	advmod	_	O	O
+55	96	5	had	have	VBD	_	0	root	_	O	O
+55	96	6	to	to	TO	_	7	aux	_	O	O
+55	96	7	get	get	VB	_	5	xcomp	_	O	O
+55	96	8	out	out	IN	_	7	prep	_	O	O
+55	96	9	of	of	IN	_	8	prep	_	O	O
+55	96	10	there	there	RB	_	9	pcomp	_	O	O
+55	96	11	,	,	,	_	5	punct	_	O	O
+55	96	12	and	and	CC	_	5	cc	_	O	O
+55	96	13	I	I	PRP	_	14	nsubj	_	O	U-Rachel
+55	96	14	started	start	VBD	_	5	conj	_	O	O
+55	96	15	wondering	wonder	VBG	_	14	xcomp	_	O	O
+55	96	16	'	'	``	_	15	punct	_	O	O
+55	96	17	Why	why	WRB	_	20	advmod	_	O	O
+55	96	18	am	be	VBP	_	20	aux	_	O	O
+55	96	19	I	I	PRP	_	20	nsubj	_	O	U-Rachel
+55	96	20	doing	do	VBG	_	15	ccomp	_	O	O
+55	96	21	this	this	DT	_	20	dobj	_	O	O
+55	96	22	,	,	,	_	14	punct	_	O	O
+55	96	23	and	and	CC	_	14	cc	_	O	O
+55	96	24	who	who	WP	_	29	pobj	_	O	O
+55	96	25	am	be	VBP	_	27	aux	_	O	O
+55	96	26	I	I	PRP	_	27	nsubj	_	O	U-Rachel
+55	96	27	doing	do	VBG	_	14	conj	_	O	O
+55	96	28	this	this	DT	_	27	dobj	_	O	O
+55	96	29	for	for	IN	_	27	prep	_	O	O
+55	96	30	?	?	.	_	27	punct	_	O	O
+
+55	97	1	'	'	''	_	0	case	_	O	O
+55	97	2	.	.	.	_	1	punct	_	O	O
+
+55	98	1	So	so	RB	_	7	advmod	_	O	O
+55	98	2	anyway	anyway	UH	_	7	discourse	_	O	O
+55	98	3	I	I	PRP	_	7	nsubj	_	O	U-Rachel
+55	98	4	just	just	RB	_	7	advmod	_	O	O
+55	98	5	did	do	VBD	_	7	aux	_	O	O
+55	98	6	n't	not	RB	_	7	neg	_	O	O
+55	98	7	know	know	VB	_	0	root	_	O	O
+55	98	8	where	where	WRB	_	10	advmod	_	O	O
+55	98	9	to	to	TO	_	10	aux	_	O	O
+55	98	10	go	go	VB	_	7	xcomp	_	O	O
+55	98	11	,	,	,	_	7	punct	_	O	O
+55	98	12	and	and	CC	_	7	cc	_	O	O
+55	98	13	I	I	PRP	_	14	nsubj	_	O	U-Rachel
+55	98	14	know	know	VBP	_	7	conj	_	O	O
+55	98	15	that	that	IN	_	21	mark	_	O	O
+55	98	16	you	you	PRP	_	21	nsubj	_	O	U-Monica
+55	98	17	and	and	CC	_	16	cc	_	O	O
+55	98	18	I	I	PRP	_	16	conj	_	O	U-Rachel
+55	98	19	have	have	VBP	_	21	aux	_	O	O
+55	98	20	kinda	kinda	RB	_	21	advmod	_	O	O
+55	98	21	drifted	drift	VBN	_	14	ccomp	_	O	O
+55	98	22	apart	apart	RB	_	21	advmod	_	O	O
+55	98	23	,	,	,	_	14	punct	_	O	O
+55	98	24	but	but	CC	_	14	cc	_	O	O
+55	98	25	you	you	PRP	_	26	nsubj	_	O	U-Monica
+55	98	26	're	be	VBP	_	14	conj	_	O	O
+55	98	27	the	the	DT	_	29	det	_	O	O
+55	98	28	only	only	JJ	_	29	nmod	_	O	O
+55	98	29	person	person	NN	_	26	attr	_	O	U-Monica
+55	98	30	I	I	PRP	_	31	nsubj	_	O	U-Rachel
+55	98	31	knew	know	VBD	_	29	relcl	_	O	O
+55	98	32	who	who	WP	_	33	nsubj	_	O	O
+55	98	33	lived	live	VBD	_	31	ccomp	_	O	O
+55	98	34	here	here	RB	_	33	advmod	_	O	O
+55	98	35	in	in	IN	_	34	prep	_	O	O
+55	98	36	the	the	DT	_	37	det	_	O	O
+55	98	37	city	city	NN	_	35	pobj	_	O	O
+55	98	38	.	.	.	_	26	punct	_	O	O
+
+56	99	1	Who	who	WP	_	4	nsubjpass	_	O	O
+56	99	2	was	be	VBD	_	4	auxpass	_	O	O
+56	99	3	n't	not	RB	_	4	neg	_	O	O
+56	99	4	invited	invite	VBN	_	0	root	_	O	O
+56	99	5	to	to	IN	_	4	prep	_	O	O
+56	99	6	the	the	DT	_	7	det	_	O	O
+56	99	7	wedding	wedding	NN	_	5	pobj	_	O	O
+56	99	8	.	.	.	_	4	punct	_	O	O
+
+57	100	1	Ooh	ooh	UH	_	6	discourse	_	O	O
+57	100	2	,	,	,	_	6	punct	_	O	O
+57	100	3	I	I	PRP	_	6	nsubj	_	O	U-Rachel
+57	100	4	was	be	VBD	_	6	aux	_	O	O
+57	100	5	kinda	kinda	RB	_	6	advmod	_	O	O
+57	100	6	hoping	hope	VBG	_	0	root	_	O	O
+57	100	7	that	that	DT	_	10	nsubj	_	O	O
+57	100	8	would	would	MD	_	10	aux	_	O	O
+57	100	9	n't	not	RB	_	10	neg	_	O	O
+57	100	10	be	be	VB	_	6	ccomp	_	O	O
+57	100	11	an	an	DT	_	12	det	_	O	O
+57	100	12	issue	issue	NN	_	10	attr	_	O	O
+57	100	13	...	..	.	_	6	punct	_	O	O
+

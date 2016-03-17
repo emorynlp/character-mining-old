@@ -15,7 +15,9 @@
  */
 package edu.emory.mathcs.nlp.mining.character.structure;
 
+import edu.emory.mathcs.nlp.component.template.node.FeatMap;
 import edu.emory.mathcs.nlp.component.template.node.NLPNode;
+import edu.emory.mathcs.nlp.component.template.util.BILOU;
 
 /**
  * @author 	Henry(Yu-Hsin) Chen ({@code yu-hsin.chen@emory.edu})
@@ -24,7 +26,29 @@ import edu.emory.mathcs.nlp.component.template.node.NLPNode;
  */
 public class StatementNode extends NLPNode{
 	private static final long serialVersionUID = 7476507663839944246L;
+	static final String ROOT_TAG = "@#r$%";
+	
 	protected String referant_label;
+	
+	public StatementNode(){ }
+	
+	public StatementNode(NLPNode node){
+		super(node.getID(), node.getWordForm(), node.getLemma(), node.getPartOfSpeechTag(), 
+			node.getNamedEntityTag(), node.getFeatMap(), node.getDependencyHead(), node.getDependencyLabel());
+		setReferantLabel(BILOU.O.toString());
+	}
+	
+	public StatementNode(NLPNode node, String referant_label){
+		super(node.getID(), node.getWordForm(), node.getLemma(), node.getPartOfSpeechTag(), 
+			node.getNamedEntityTag(), node.getFeatMap(), node.getDependencyHead(), node.getDependencyLabel());
+		setReferantLabel((referant_label == null)? BILOU.O.toString() : referant_label);
+	}
+	
+	public StatementNode toRoot(){
+		set(0, ROOT_TAG, ROOT_TAG, ROOT_TAG, ROOT_TAG, new FeatMap(), null, null);
+		setReferantLabel(ROOT_TAG);
+		return this;
+	}
 	
 	public String getReferantLabel(){
 		return referant_label;

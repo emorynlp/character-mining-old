@@ -20,10 +20,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.StringJoiner;
+import java.util.ArrayList;
+import java.util.List;
 
 import edu.emory.mathcs.nlp.common.collection.tuple.IntIntPair;
-import edu.emory.mathcs.nlp.common.collection.tuple.Pair;
+import edu.emory.mathcs.nlp.common.collection.tuple.Triple;
 import edu.emory.mathcs.nlp.common.constant.StringConst;
 import edu.emory.mathcs.nlp.common.util.FileUtils;
 import edu.emory.mathcs.nlp.common.util.IOUtils;
@@ -37,9 +38,9 @@ import edu.emory.mathcs.nlp.decode.NLPDecoder;
  * @version	1.0
  * @since 	Mar 8, 2016
  */
-public class ReleaseDataNLP4JParseScript {
+public class ClearnNLPtoNLP4JParseScript {
 	public static final String
-		IN_DIR = "/Users/HenryChen/Desktop/Friends_Release",
+		IN_DIR = "/Users/HenryChen/Desktop/CharacterDetection/MTurk_out/release/augmented/final",
 		IN_EXT = ".dep",
 		OUT_EXT = "nlp4j";
 	
@@ -47,31 +48,42 @@ public class ReleaseDataNLP4JParseScript {
 		InputStream in_config = IOUtils.createFileInputStream("src/main/configuration/config-decode-en.xml");
 		NLPDecoder decoder = new NLPDecoder(new DecodeConfig(new BufferedInputStream(in_config)));
 				
-		NLPNode[] nodes; Pair<IntIntPair, String> line;
-		int i, u_id, s_id; String sentence;
+		Triple<IntIntPair, List<String>, List<String>> triple;
+		int i, u_id, s_id; List<String> annotations; NLPNode[] nodes; 
 		
 		for(String file_path : FileUtils.getFileList(IN_DIR, IN_EXT)){
 			String out_path = FileUtils.replaceExtension(file_path, OUT_EXT);
 			BufferedReader reader = IOUtils.createBufferedReader(file_path);
 			PrintWriter writer = new PrintWriter(IOUtils.createBufferedPrintStream(out_path));
 			
-			while( (line = getNextSentence(reader)) != null){
-				u_id = line.o1.i1; 
-				s_id = line.o1.i2;
-				sentence = line.o2;
+			while( (triple = getNextSentence(reader)) != null){
+				u_id = triple.o1.i1; 
+				s_id = triple.o1.i2;
+				annotations = triple.o3;
 				
-				nodes = decoder.decode(sentence);
+				nodes = decode(decoder, triple.o2);
 				for(i = 1; i < nodes.length; i++)
-					writer.println(String.format("%d\t%d\t%s", u_id, s_id, nodes[i]));
+					writer.println(String.format("%d\t%d\t%s\t%s", u_id, s_id, nodes[i], annotations.get(i-1)));
 				writer.println();
 			}
 			writer.close();
 		}
 	}
 	
-	public static Pair<IntIntPair, String> getNextSentence(BufferedReader reader) throws IOException{
+	public static NLPNode[] decode(NLPDecoder decoder, List<String> tokens){
+		NLPNode[] nodes = new NLPNode[tokens.size()+1];
+		nodes[0] = new NLPNode().toRoot();
+		
+		for(int i = 1; i <= tokens.size(); i++)
+			nodes[i] = new NLPNode(i, tokens.get(i-1));
+		decoder.decode(nodes);
+		
+		return nodes;
+	}
+	
+	public static Triple<IntIntPair, List<String>, List<String>> getNextSentence(BufferedReader reader) throws IOException{
 		int u_id = -1, s_id = -1; String line; String[] fields;
-		StringJoiner joiner = new StringJoiner(StringConst.SPACE);
+		List<String> tokens = new ArrayList<>(), annotations = new ArrayList<>();
 		
 		while( (line = reader.readLine()) != null){
 			if(line.equals(StringConst.EMPTY)) break;
@@ -81,9 +93,11 @@ public class ReleaseDataNLP4JParseScript {
 				u_id = Integer.parseInt(fields[0]);
 				s_id = Integer.parseInt(fields[1]);
 			}
-			joiner.add(fields[3]);
+			
+			tokens.add(fields[3]);
+			annotations.add(fields[12]);
 		}
 		
-		return (joiner.length() == 0)? null : new Pair<>(new IntIntPair(u_id, s_id), joiner.toString());
+		return (tokens.isEmpty())? null : new Triple<>(new IntIntPair(u_id, s_id), tokens, annotations);
 	}
 }
