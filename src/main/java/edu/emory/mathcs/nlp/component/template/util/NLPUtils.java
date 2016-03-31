@@ -66,11 +66,11 @@ public class NLPUtils
 	static public NLPComponent getComponent(InputStream in)
 	{
 		ObjectInputStream oin = IOUtils.createObjectXZBufferedInputStream(in);
-		OnlineComponent<?> component = null;
+		OnlineComponent<?, ?> component = null;
 		
 		try
 		{
-			component = (OnlineComponent<?>)oin.readObject();
+			component = (OnlineComponent<?, ?>)oin.readObject();
 			component.setFlag(NLPFlag.DECODE);
 			oin.close();
 		}
@@ -79,14 +79,15 @@ public class NLPUtils
 		return component;
 	}
 	
-	static public List<NLPNode[]> getNonStopWords(List<NLPNode[]> document)
+	@SuppressWarnings("unchecked")
+	static public <N extends NLPNode>List<N[]> getNonStopWords(List<N[]> document)
 	{
-		List<NLPNode[]> nonstop = new ArrayList<>();
-		NLPNode node;
+		List<N[]> nonstop = new ArrayList<>();
+		N node;
 		
-		for (NLPNode[] nodes : document)
+		for (N[] nodes : document)
 		{
-			List<NLPNode> sen = new ArrayList<>();
+			List<N> sen = new ArrayList<>();
 			
 			for (int i=1; i<nodes.length; i++)
 			{
@@ -97,7 +98,7 @@ public class NLPUtils
 			
 			if (!sen.isEmpty())
 			{
-				NLPNode[] snodes = new NLPNode[sen.size()+1];
+				N[] snodes = (N[]) new NLPNode[sen.size()+1];
 				snodes[0] = nodes[0];
 				
 				for (int i=1; i<snodes.length; i++)

@@ -24,7 +24,7 @@ import edu.emory.mathcs.nlp.learning.util.LabelMap;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class SRLState extends NLPState
+public class SRLState extends NLPState<NLPNode>
 {
 //	private List<Pair<NLPNode,NLPNode>> argument_candidates;
 //	private NLPNode predicate;

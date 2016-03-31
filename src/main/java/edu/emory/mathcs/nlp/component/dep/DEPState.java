@@ -28,7 +28,7 @@ import it.unimi.dsi.fastutil.ints.IntArrayList;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class DEPState extends NLPState
+public class DEPState extends NLPState<NLPNode>
 {
 	public static final String ARC_LEFT    = "L";
 	public static final String ARC_RIGHT   = "R";

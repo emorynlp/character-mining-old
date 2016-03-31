@@ -29,7 +29,7 @@ import it.unimi.dsi.fastutil.ints.IntSet;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class DEPParser extends OnlineComponent<DEPState>
+public class DEPParser extends OnlineComponent<DEPState, NLPNode>
 {
 	private static final long serialVersionUID = 7031031976396726276L;
 	private DEPLabelCandidate label_candidates;

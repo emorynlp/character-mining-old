@@ -26,7 +26,7 @@ import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class POSTagger extends OnlineComponent<POSState>
+public class POSTagger extends OnlineComponent<POSState, NLPNode>
 {
 	private static final long serialVersionUID = -7926217238116337203L;
 	

@@ -28,17 +28,17 @@ import edu.emory.mathcs.nlp.learning.util.LabelMap;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class DOCState extends NLPState
+public class DOCState<N extends NLPNode> extends NLPState<N>
 {
 	protected NLPNode         key_node;
 	protected String          feat_key;
 	protected String          oracle;
 	protected boolean         terminate;
-	protected List<NLPNode[]> non_stopwords;
+	protected List<N[]> 		non_stopwords;
 	protected float[]         prediction_scores;
 	protected float[][]       ensemble_scores;
 	
-	public DOCState(List<NLPNode[]> document, String key)
+	public DOCState(List<N[]> document, String key)
 	{
 		super(document);
 		feat_key = key;
@@ -76,7 +76,7 @@ public class DOCState extends NLPState
 	
 //	============================== GETTERS/SETTERS ==============================
 	
-	public List<NLPNode[]> getDocument(boolean excludeStopwords)
+	public List<N[]> getDocument(boolean excludeStopwords)
 	{
 		return excludeStopwords ? non_stopwords : getDocument();
 	}
@@ -117,7 +117,7 @@ public class DOCState extends NLPState
 	}
 	
 	@Override
-	public NLPNode getNode(FeatureItem item)
+	public N getNode(FeatureItem item)
 	{
 		return null;
 	}

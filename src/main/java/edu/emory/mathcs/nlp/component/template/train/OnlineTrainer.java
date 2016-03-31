@@ -43,16 +43,16 @@ import edu.emory.mathcs.nlp.learning.optimization.OnlineOptimizer;
  * Provide instances and methods for training NLP components.
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public abstract class OnlineTrainer<S extends NLPState>
+public abstract class OnlineTrainer<S extends NLPState<N>, N extends NLPNode>
 {
 	public OnlineTrainer() {};
 	
 //	=================================== COMPONENT ===================================
 
 	@SuppressWarnings("unchecked")
-	public OnlineComponent<S> initComponent(NLPMode mode, InputStream configStream, InputStream previousModelStream)
+	public OnlineComponent<S, N> initComponent(NLPMode mode, InputStream configStream, InputStream previousModelStream)
 	{
-		OnlineComponent<S> component = null;
+		OnlineComponent<S, N> component = null;
 		NLPConfig configuration = null;
 		
 		if (previousModelStream != null)
@@ -62,7 +62,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 			
 			try
 			{
-				component = (OnlineComponent<S>)oin.readObject();
+				component = (OnlineComponent<S, N>)oin.readObject();
 				configuration = component.setConfiguration(configStream);
 				oin.close();
 			}
@@ -90,18 +90,18 @@ public abstract class OnlineTrainer<S extends NLPState>
 		return component;
 	}
 	
-	public abstract OnlineComponent<S> createComponent(NLPMode mode, InputStream config);	
+	public abstract OnlineComponent<S, N> createComponent(NLPMode mode, InputStream config);	
 	
 //	@SuppressWarnings("unchecked")
-//	protected OnlineComponent<S> createComponent(NLPMode mode, InputStream config)
+//	protected OnlineComponent<S, N> createComponent(NLPMode mode, InputStream config)
 //	{
 //		switch (mode)
 //		{
-//		case pos: return (OnlineComponent<S>)new POSTagger(config);
-//		case ner: return (OnlineComponent<S>)new NERTagger(config);
-//		case dep: return (OnlineComponent<S>)new DEPParser(config);
-//		case srl: return (OnlineComponent<S>)new SRLParser(config);
-//		case pleonastic: return (OnlineComponent<S>)new PleonasticClassifier(config);
+//		case pos: return (OnlineComponent<S, N>)new POSTagger(config);
+//		case ner: return (OnlineComponent<S, N>)new NERTagger(config);
+//		case dep: return (OnlineComponent<S, N>)new DEPParser(config);
+//		case srl: return (OnlineComponent<S, N>)new SRLParser(config);
+//		case pleonastic: return (OnlineComponent<S, N>)new PleonasticClassifier(config);
 //		default : throw new IllegalArgumentException("Unsupported mode: "+mode);
 //		}
 //	}
@@ -113,7 +113,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 		InputStream configStream = IOUtils.createFileInputStream(configurationFile);
 		InputStream previousModelStream = (previousModelFile != null) ? IOUtils.createFileInputStream(previousModelFile) : null;
 		GlobalLexica lexica = new GlobalLexica(IOUtils.createFileInputStream(configurationFile));
-		OnlineComponent<S> component = initComponent(mode, configStream, previousModelStream);
+		OnlineComponent<S, N> component = initComponent(mode, configStream, previousModelStream);
 		
 		try
 		{
@@ -122,7 +122,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 		catch (Exception e) {e.printStackTrace();}
 	}
 	
-	public void train(List<String> trainFiles, List<String> developFiles, String modelFile, OnlineComponent<S> component, GlobalLexica lexica) throws Exception
+	public void train(List<String> trainFiles, List<String> developFiles, String modelFile, OnlineComponent<S, N> component, GlobalLexica lexica) throws Exception
 	{
 		OnlineOptimizer optimizer = component.getOptimizer();
 		HyperParameter hp = component.getHyperParameter();
@@ -176,7 +176,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 			saveModel(component, IOUtils.createFileOutputStream(modelFile));
 	}
 	
-	protected DoubleIntPair evaluate(List<String> developFiles, OnlineComponent<S> component, GlobalLexica lexica, TSVReader reader)
+	protected DoubleIntPair evaluate(List<String> developFiles, OnlineComponent<S, N> component, GlobalLexica lexica, TSVReader reader)
 	{
 		component.setFlag(NLPFlag.EVALUATE);
 		Eval eval = component.getEval();
@@ -187,7 +187,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 	
 //	=================================== HELPERS ===================================
 	
-	protected double iterate(TSVReader reader, List<String> inputFiles, OnlineComponent<S> component, GlobalLexica lexica, boolean evaluate)
+	protected double iterate(TSVReader reader, List<String> inputFiles, OnlineComponent<S, N> component, GlobalLexica lexica, boolean evaluate)
 	{
 		long st, et, time = 0, unit = 0;
 		List<NLPNode[]> document;
@@ -233,7 +233,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 		return 1000d * unit / time;
 	}
 	
-	protected int update(OnlineComponent<S> component, int count, boolean last)
+	protected int update(OnlineComponent<S, N> component, int count, boolean last)
 	{
 		OnlineOptimizer optimizer = component.getOptimizer();
 		HyperParameter hp = component.getHyperParameter();
@@ -247,7 +247,7 @@ public abstract class OnlineTrainer<S extends NLPState>
 		return count;
 	}
 	
-	public void saveModel(OnlineComponent<S> component, OutputStream stream)
+	public void saveModel(OnlineComponent<S, N> component, OutputStream stream)
 	{
 		ObjectOutputStream out = IOUtils.createObjectXZBufferedOutputStream(stream);
 		

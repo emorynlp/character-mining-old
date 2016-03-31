@@ -25,7 +25,7 @@ import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public abstract class DOCAnalyzer<S extends DOCState> extends OnlineComponent<S>
+public abstract class DOCAnalyzer<S extends DOCState<N>, N extends NLPNode> extends OnlineComponent<S, N>
 {
 	private static final long serialVersionUID = 408764219381044191L;
 
@@ -39,7 +39,7 @@ public abstract class DOCAnalyzer<S extends DOCState> extends OnlineComponent<S>
 	@Override
 	public void initFeatureTemplate()
 	{
-		feature_template = new DOCFeatureTemplate<S>(config.getFeatureTemplateElement(), getHyperParameter());
+		feature_template = new DOCFeatureTemplate<>(config.getFeatureTemplateElement(), getHyperParameter());
 	}
 	
 	@Override

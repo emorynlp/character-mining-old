@@ -23,7 +23,7 @@ import edu.emory.mathcs.nlp.learning.util.LabelMap;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class POSState extends L2RState
+public class POSState extends L2RState<NLPNode>
 {
 	public POSState(NLPNode[] nodes)
 	{

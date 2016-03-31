@@ -29,7 +29,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap.Entry;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class NERState extends L2RState
+public class NERState extends L2RState<NLPNode>
 {
 	public NERState(NLPNode[] nodes)
 	{

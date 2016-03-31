@@ -38,7 +38,7 @@ import it.unimi.dsi.fastutil.objects.Object2FloatOpenHashMap;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class DOCFeatureTemplate<S extends DOCState> extends FeatureTemplate<S>
+public class DOCFeatureTemplate<S extends DOCState<N>, N extends NLPNode> extends FeatureTemplate<S, N>
 {
 	private static final long serialVersionUID = 8581842859392646419L;
 	private List<Field> feature_list_type;
@@ -128,14 +128,15 @@ public class DOCFeatureTemplate<S extends DOCState> extends FeatureTemplate<S>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected Object2FloatMap<String> getBagOfWords(S state, FeatureItem[] items, boolean stopwords)
 	{
 		Object2FloatMap<String> map = new Object2FloatOpenHashMap<>();
-		NLPNode node;
+		N node;
 		int index;
 		String f;
 		
-		for (NLPNode[] nodes : state.getDocument(stopwords))
+		for (N[] nodes : state.getDocument(stopwords))
 		{
 			outer: for (int i=1; i<nodes.length; i++)
 			{
@@ -145,7 +146,7 @@ public class DOCFeatureTemplate<S extends DOCState> extends FeatureTemplate<S>
 				{
 					index = i + item.window;
 					if (index < 1 || index >= nodes.length) continue outer;
-					node = state.getRelativeNode(nodes[index], item.relation);
+					node = (N) state.getRelativeNode(nodes[index], item.relation);
 					if (node == null) continue outer;
 					f = getFeature(state, item, node);
 					if (f == null) continue outer;
@@ -164,7 +165,7 @@ public class DOCFeatureTemplate<S extends DOCState> extends FeatureTemplate<S>
 		Object2FloatMap<String> map = new Object2FloatOpenHashMap<>();
 		Set<String> clusters;
 		
-		for (NLPNode[] nodes : state.getDocument(stopwords))
+		for (N[] nodes : state.getDocument(stopwords))
 		{
 			for (int i=1; i<nodes.length; i++)
 			{

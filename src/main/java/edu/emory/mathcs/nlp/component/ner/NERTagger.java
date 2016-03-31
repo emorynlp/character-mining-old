@@ -26,7 +26,7 @@ import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public class NERTagger extends OnlineComponent<NERState>
+public class NERTagger extends OnlineComponent<NERState, NLPNode>
 {
 	private static final long serialVersionUID = 87807440372806016L;
 

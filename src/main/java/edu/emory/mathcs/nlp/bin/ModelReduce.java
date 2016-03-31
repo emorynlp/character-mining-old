@@ -60,13 +60,13 @@ public class ModelReduce
 	public <N,S>ModelReduce() {}
 	
 	@SuppressWarnings("unchecked")
-	public <S extends NLPState>ModelReduce(String[] args) throws Exception
+	public <S extends NLPState<N>, N extends NLPNode>ModelReduce(String[] args) throws Exception
 	{
 		BinUtils.initArgs(args, this);
 		
 		GlobalLexica lexica = new GlobalLexica(IOUtils.createFileInputStream(configuration_file));
 		ObjectInputStream in = IOUtils.createObjectXZBufferedInputStream(model_file);
-		OnlineComponent<S> component = (OnlineComponent<S>)in.readObject(); in.close();
+		OnlineComponent<S, N> component = (OnlineComponent<S, N>)in.readObject(); in.close();
 		component.setConfiguration(IOUtils.createFileInputStream(configuration_file));
 		List<String> inputFiles = FileUtils.getFileList(input_path, input_ext);
 		OnlineOptimizer optimizer = component.getOptimizer();
@@ -93,7 +93,7 @@ public class ModelReduce
 		}
 	}
 	
-	public <S extends NLPState>double evaluate(List<String> inputFiles, OnlineComponent<S> component, GlobalLexica lexica, float rate) throws Exception
+	public <S extends NLPState<N>, N extends NLPNode>double evaluate(List<String> inputFiles, OnlineComponent<S, N> component, GlobalLexica lexica, float rate) throws Exception
 	{
 		TSVReader reader = component.getConfiguration().getTSVReader();
 		long st, et, ttime = 0, tnode = 0;

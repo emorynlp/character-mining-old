@@ -26,12 +26,12 @@ import edu.emory.mathcs.nlp.learning.util.LabelMap;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public abstract class L2RState extends NLPState
+public abstract class L2RState<N extends NLPNode> extends NLPState<N>
 {
 	protected String[] oracle;
 	protected int input = 1;
 	
-	public L2RState(NLPNode[] nodes)
+	public L2RState(N[] nodes)
 	{
 		super(nodes);
 	}
@@ -76,10 +76,11 @@ public abstract class L2RState extends NLPState
 	}
 	
 	@Override
-	public NLPNode getNode(FeatureItem item)
+	@SuppressWarnings("unchecked")
+	public N getNode(FeatureItem item)
 	{
-		NLPNode node = getNode(input, item.window);
-		return getRelativeNode(item, node);
+		N node = getNode(input, item.window);
+		return (N) getRelativeNode(item, node);
 	}
 	
 	public NLPNode getInput()

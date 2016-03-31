@@ -34,10 +34,10 @@ import edu.emory.mathcs.nlp.learning.util.MLUtils;
 /**
  * @author Jinho D. Choi ({@code jinho.choi@emory.edu})
  */
-public abstract class OnlineComponent<S extends NLPState> implements NLPComponent, Serializable
+public abstract class OnlineComponent<S extends NLPState<N>, N extends NLPNode> implements NLPComponent, Serializable
 {
 	private static final long serialVersionUID = 59819173578703335L;
-	protected FeatureTemplate<S> feature_template;
+	protected FeatureTemplate<S, N> feature_template;
 	protected OnlineOptimizer    optimizer;
 	protected boolean            document_based;
 	
@@ -81,12 +81,12 @@ public abstract class OnlineComponent<S extends NLPState> implements NLPComponen
 		hyper_parameter = hyperparameter;
 	}
 	
-	public FeatureTemplate<S> getFeatureTemplate()
+	public FeatureTemplate<S, N> getFeatureTemplate()
 	{
 		return feature_template;
 	}
 
-	public void setFeatureTemplate(FeatureTemplate<S> template)
+	public void setFeatureTemplate(FeatureTemplate<S, N> template)
 	{
 		feature_template = template;
 	}

@@ -50,18 +50,18 @@ public class TSVDecode
 	public <N,S>TSVDecode() {}
 	
 	@SuppressWarnings("unchecked")
-	public <S extends NLPState>TSVDecode(String[] args) throws Exception
+	public <S extends NLPState<N>, N extends NLPNode>TSVDecode(String[] args) throws Exception
 	{
 		BinUtils.initArgs(args, this);
 		
 		GlobalLexica lexica = new GlobalLexica(IOUtils.createFileInputStream(configuration_file));
 		ObjectInputStream in = IOUtils.createObjectXZBufferedInputStream(model_file);
-		OnlineComponent<S> component = (OnlineComponent<S>)in.readObject();
+		OnlineComponent<S, N> component = (OnlineComponent<S, N>)in.readObject();
 		component.setConfiguration(IOUtils.createFileInputStream(configuration_file));
 		evaluate(FileUtils.getFileList(input_path, input_ext), component, lexica);
 	}
 	
-	public <S extends NLPState>void evaluate(List<String> inputFiles, OnlineComponent<S> component, GlobalLexica lexica) throws Exception
+	public <S extends NLPState<N>, N extends NLPNode>void evaluate(List<String> inputFiles, OnlineComponent<S, N> component, GlobalLexica lexica) throws Exception
 	{
 		TSVReader reader = component.getConfiguration().getTSVReader();
 		PrintStream fout;

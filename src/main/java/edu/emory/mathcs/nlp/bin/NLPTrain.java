@@ -28,6 +28,7 @@ import edu.emory.mathcs.nlp.component.ner.NERTagger;
 import edu.emory.mathcs.nlp.component.pos.POSTagger;
 import edu.emory.mathcs.nlp.component.srl.SRLParser;
 import edu.emory.mathcs.nlp.component.template.OnlineComponent;
+import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 import edu.emory.mathcs.nlp.component.template.state.NLPState;
 import edu.emory.mathcs.nlp.component.template.train.OnlineTrainer;
 import edu.emory.mathcs.nlp.component.template.util.NLPMode;
@@ -59,19 +60,19 @@ public class NLPTrain
 		BinUtils.initArgs(args, this);
 		List<String> trainFiles   = FileUtils.getFileList(train_path  , train_ext);
 		List<String> developFiles = (develop_path != null) ? FileUtils.getFileList(develop_path, develop_ext) : null;
-		OnlineTrainer<?> trainer  = createOnlineTrainer();
+		OnlineTrainer<?, ?> trainer  = createOnlineTrainer();
 		
 		Collections.sort(trainFiles);
 		if (developFiles != null) Collections.sort(developFiles);
 		trainer.train(NLPMode.valueOf(mode), trainFiles, developFiles, configuration_file, model_file, previous_model_file);
 	}
 	
-	public <S extends NLPState>OnlineTrainer<S> createOnlineTrainer()
+	public <S extends NLPState<N>, N extends NLPNode>OnlineTrainer<S, N> createOnlineTrainer()
 	{
-		return new OnlineTrainer<S>()
+		return new OnlineTrainer<S, N>()
 		{
 			@Override
-			public OnlineComponent<S> createComponent(NLPMode mode, InputStream config)
+			public OnlineComponent<S, N> createComponent(NLPMode mode, InputStream config)
 			{
 				return createOnlineComponent(mode, config);
 			}
@@ -79,14 +80,14 @@ public class NLPTrain
 	}
 	
 	@SuppressWarnings("unchecked")
-	public <S extends NLPState>OnlineComponent<S> createOnlineComponent(NLPMode mode, InputStream config)
+	public <S extends NLPState<N>, N extends NLPNode>OnlineComponent<S, N> createOnlineComponent(NLPMode mode, InputStream config)
 	{
 		switch (mode)
 		{
-		case pos: return (OnlineComponent<S>)new POSTagger(config);
-		case ner: return (OnlineComponent<S>)new NERTagger(config);
-		case dep: return (OnlineComponent<S>)new DEPParser(config);
-		case srl: return (OnlineComponent<S>)new SRLParser(config);
+		case pos: return (OnlineComponent<S, N>)new POSTagger(config);
+		case ner: return (OnlineComponent<S, N>)new NERTagger(config);
+		case dep: return (OnlineComponent<S, N>)new DEPParser(config);
+		case srl: return (OnlineComponent<S, N>)new SRLParser(config);
 		default : throw new IllegalArgumentException("Unsupported mode: "+mode);
 		}
 	}
