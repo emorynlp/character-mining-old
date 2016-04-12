@@ -17,7 +17,7 @@ package edu.emory.mathcs.nlp.mining.character.script.bigbang;
 
 import java.io.IOException;
 
-import edu.emory.mathcs.nlp.mining.character.script.util.ScriptRawTSVtoSceneTSVSplitter;
+import edu.emory.mathcs.nlp.mining.character.script.util.data.ScriptRawTSVtoSceneTSVSplitter;
 
 /**
  * @author 	Henry(Yu-Hsin) Chen ({@code yu-hsin.chen@emory.edu})

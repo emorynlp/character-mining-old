@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.emory.mathcs.nlp.mining.character.script.util;
+package edu.emory.mathcs.nlp.mining.character.script.util.nlp4j;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -38,6 +38,7 @@ import edu.emory.mathcs.nlp.tokenization.Tokenizer;
  * @since 	Mar 9, 2016
  */
 public class ScriptSceneTSVtoNLP4JParser {
+	public static final String REGEX_PARATHESE = "\\(.*\\)"; 
 	
 	public static void toNLP4J(String in_path, String in_ext, String out_path, String out_tree_ext, String out_speaker_ext) throws IOException{
 		if(out_path.charAt(out_path.length()-1) != '/') out_path += "/";
@@ -69,7 +70,8 @@ public class ScriptSceneTSVtoNLP4JParser {
 			if(line.equals(StringConst.EMPTY)) continue;
 			fields = Splitter.splitTabs(line);
 			
-			spk = fields[0]; statement = fields[2];
+			statement = fields[2];
+			spk = fields[0].replaceAll(REGEX_PARATHESE, StringConst.EMPTY); 
 			trees = tokenizer.segmentize(statement);
 			
 			for(NLPNode[] tree : trees){				

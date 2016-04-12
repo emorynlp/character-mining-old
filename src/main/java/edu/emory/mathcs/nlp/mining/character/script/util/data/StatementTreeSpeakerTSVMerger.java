@@ -13,22 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.emory.mathcs.nlp.mining.character.script.bigbang;
+package edu.emory.mathcs.nlp.mining.character.script.util.data;
 
-import edu.emory.mathcs.nlp.mining.character.script.util.nlp4j.NLP4JtoStatementTreeProcessor;
+import edu.emory.mathcs.nlp.mining.character.structure.Scene;
+import edu.emory.mathcs.nlp.mining.character.structure.StatementNode;
+import edu.emory.mathcs.nlp.mining.character.structure.Utterance;
 
 /**
  * @author 	Henry(Yu-Hsin) Chen ({@code yu-hsin.chen@emory.edu})
  * @version	1.0
- * @since 	Mar 10, 2016
+ * @since 	Mar 30, 2016
  */
-public class NLP4JtoStatementTreeProcessScript_SpanTagging {
-	public static final String
-		IN_DIR  = "/Users/HenryChen/Desktop/BigBang/season1/original", 			IN_TREE_EXT  = ".dep", 		IN_SPEAKER_EXT = ".spk",
-		OUT_DIR = "/Users/HenryChen/Desktop/BigBang/season1/span_tagged",		OUT_EXT  = ".dep";
+public class StatementTreeSpeakerTSVMerger {
+	private final String SPEAKER_KEY = "speaker";
 	
-	public static void main(String[] args) throws Exception{
-		NLP4JtoStatementTreeProcessor processor = new NLP4JtoStatementTreeProcessor();
-		processor.process(IN_DIR, IN_TREE_EXT, IN_SPEAKER_EXT, OUT_DIR, OUT_EXT);
+	public Scene merge(Scene scene){
+		for(Utterance utterance : scene){
+			for(StatementNode[] nodes : utterance.getStatementTrees()){
+				if(utterance.getSpeaker() != null)
+					nodes[1].putFeat(SPEAKER_KEY, utterance.getSpeaker());
+			}
+		}
+		return scene;
 	}
 }

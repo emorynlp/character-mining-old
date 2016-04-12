@@ -50,7 +50,7 @@ public class DataLoaderUtil {
 		return metadata;
 	}
 	
-	public static int[] getSceneMetaDate(String filename){
+	public static int[] getSceneMetaData(String filename){
 		int idx = filename.lastIndexOf('/');
 		String fileName = (idx > 0)? filename.substring(idx+1) : filename;
 		
@@ -75,7 +75,7 @@ public class DataLoaderUtil {
 		// Construct an index map for speaker files
 		Map<String, String> m_speaker_file_paths = new HashMap<>();
 		for(String speaker_file_path : speaker_file_paths){
-			metadata = DataLoaderUtil.getSceneMetaDate(speaker_file_path);
+			metadata = DataLoaderUtil.getSceneMetaData(speaker_file_path);
 			base = String.format("%02d%02d%02d", metadata[0], metadata[1], metadata[2]);
 			m_speaker_file_paths.put(base, speaker_file_path);
 		}
@@ -86,7 +86,7 @@ public class DataLoaderUtil {
 		TreeMap<Integer, Season> m_seasons = new TreeMap<>();
 		
 		for(String tree_file_path : tree_file_paths){
-			metadata = DataLoaderUtil.getSceneMetaDate(tree_file_path);
+			metadata = DataLoaderUtil.getSceneMetaData(tree_file_path);
 			base = String.format("%02d%02d%02d", metadata[0], metadata[1], metadata[2]);
 			speaker_file_path = m_speaker_file_paths.get(base);
 			

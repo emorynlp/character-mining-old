@@ -13,22 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.emory.mathcs.nlp.mining.character.script.bigbang;
+package edu.emory.mathcs.nlp.mining.character.script.friends;
 
-import edu.emory.mathcs.nlp.mining.character.script.util.nlp4j.NLP4JtoStatementTreeProcessor;
+import java.io.IOException;
+
+import edu.emory.mathcs.nlp.mining.character.script.util.nlp4j.ScriptSceneTSVtoNLP4JParser;
 
 /**
  * @author 	Henry(Yu-Hsin) Chen ({@code yu-hsin.chen@emory.edu})
  * @version	1.0
- * @since 	Mar 10, 2016
+ * @since 	Mar 9, 2016
  */
-public class NLP4JtoStatementTreeProcessScript_SpanTagging {
+public class ScriptSceneTSVtoNLP4JParseScript {
 	public static final String
-		IN_DIR  = "/Users/HenryChen/Desktop/BigBang/season1/original", 			IN_TREE_EXT  = ".dep", 		IN_SPEAKER_EXT = ".spk",
-		OUT_DIR = "/Users/HenryChen/Desktop/BigBang/season1/span_tagged",		OUT_EXT  = ".dep";
+		IN_DIR  = "/Users/HenryChen/Desktop/TV_Show_Tanscripts/Friends/raw/season1/scenes", 	IN_EXT   = ".tsv",
+		OUT_DIR = "/Users/HenryChen/Desktop/TV_Show_Tanscripts/Friends/season1/original",		OUT_TREE_EXT  = ".dep", 	OUT_SPEAKER_EXT = ".spk";
 	
-	public static void main(String[] args) throws Exception{
-		NLP4JtoStatementTreeProcessor processor = new NLP4JtoStatementTreeProcessor();
-		processor.process(IN_DIR, IN_TREE_EXT, IN_SPEAKER_EXT, OUT_DIR, OUT_EXT);
+	public static void main(String[] args) throws IOException{
+		ScriptSceneTSVtoNLP4JParser.toNLP4J(IN_DIR, IN_EXT, OUT_DIR, OUT_TREE_EXT, OUT_SPEAKER_EXT);
 	}
 }

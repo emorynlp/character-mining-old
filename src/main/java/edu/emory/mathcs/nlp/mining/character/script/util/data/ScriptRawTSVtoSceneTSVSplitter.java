@@ -13,15 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.emory.mathcs.nlp.mining.character.script.util;
+package edu.emory.mathcs.nlp.mining.character.script.util.data;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import edu.emory.mathcs.nlp.common.constant.StringConst;
 import edu.emory.mathcs.nlp.common.util.FileUtils;
 import edu.emory.mathcs.nlp.common.util.IOUtils;
+import edu.emory.mathcs.nlp.common.util.Joiner;
+import edu.emory.mathcs.nlp.common.util.Splitter;
+import edu.emory.mathcs.nlp.common.util.StringUtils;
 import edu.emory.mathcs.nlp.mining.character.util.DataLoaderUtil;
 
 /**
@@ -36,8 +40,9 @@ public class ScriptRawTSVtoSceneTSVSplitter {
 		List<String> l_filePaths = FileUtils.getFileList(in_path, in_ext, false);
 		if(out_path.charAt(out_path.length()-1) != '/') out_path += "/";
 		
-		String line, outPath; int[] metadata; int sceneId;
+		String line, outPath; int[] metadata; int i, sceneId;
 		BufferedReader reader; PrintWriter writer = null;
+		String[] fields;
 		
 		for(String filePath : l_filePaths){
 			reader = IOUtils.createBufferedReader(filePath); sceneId = 1; 
@@ -50,11 +55,35 @@ public class ScriptRawTSVtoSceneTSVSplitter {
 					outPath = String.format("%s%02d%02d%02d%s", out_path, metadata[0], metadata[1], sceneId++, out_ext); 					
 					writer = new PrintWriter(IOUtils.createBufferedPrintStream(outPath));
 				}
-				else 	writer.println(line);
+				else {
+					fields = Splitter.splitTabs(line);
+					fields[0] = formatSpekaer(fields[0]);
+					
+					for(i = 1; i < fields.length; i++)
+						if(fields[i].isEmpty()) fields[i] = StringConst.UNDERSCORE;
+					
+					switch(fields.length){
+					case 0: writer.println("_\t_\t_"); 											break;
+					case 1: writer.println(String.format("%s\t_\t_", fields[0])); 				break;
+					case 2: writer.println(String.format("%s\t%s\t_", fields[0], fields[1]));	break;
+					default: writer.println(Joiner.join(fields, StringConst.TAB));
+					}
+				}
 			}
 			if(writer != null) 
 				writer.close();
 			reader.close();
 		}
+	}
+	
+	public static String formatSpekaer(String field){
+		String[] words = Splitter.splitSpace(field);
+		for(int i = 0; i < words.length; i++){
+			if(words[i].length() == 1)
+				words[i] = StringUtils.toUpperCase(words[i]);
+			else if(words[i].length() > 1)
+				words[i] = Character.toUpperCase(words[i].charAt(0)) + StringUtils.toLowerCase(words[i].substring(1));
+		}
+		return Joiner.join(words, StringConst.SPACE);
 	}
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.emory.mathcs.nlp.mining.character.script.util;
+package edu.emory.mathcs.nlp.mining.character.script.util.nlp4j;
 
 import java.io.PrintWriter;
 import java.util.List;
@@ -21,6 +21,7 @@ import java.util.List;
 import edu.emory.mathcs.nlp.common.util.FileUtils;
 import edu.emory.mathcs.nlp.common.util.IOUtils;
 import edu.emory.mathcs.nlp.mining.character.reader.SceneTSVReader;
+import edu.emory.mathcs.nlp.mining.character.script.util.data.StatementTreeReferantSpanTagger;
 import edu.emory.mathcs.nlp.mining.character.structure.Scene;
 import edu.emory.mathcs.nlp.mining.character.structure.StatementNode;
 import edu.emory.mathcs.nlp.mining.character.structure.Utterance;
@@ -54,7 +55,7 @@ public class NLP4JtoStatementTreeProcessor {
 			scene = reader.fromTSV(
 				IOUtils.createFileInputStream(l_tree_paths.get(i)), 
 				IOUtils.createFileInputStream(l_speaker_paths.get(i)));
-			metadata = DataLoaderUtil.getSceneMetaDate(FileUtils.getBaseName(l_tree_paths.get(i)));
+			metadata = DataLoaderUtil.getSceneMetaData(FileUtils.getBaseName(l_tree_paths.get(i)));
 			
 			outPath = String.format("%s%02d%02d%02d%s", out_path, metadata[0], metadata[1], metadata[2], out_ext);
 			writer = new PrintWriter(IOUtils.createBufferedPrintStream(outPath));

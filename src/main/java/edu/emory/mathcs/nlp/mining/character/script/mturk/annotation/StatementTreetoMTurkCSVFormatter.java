@@ -84,7 +84,7 @@ public class StatementTreetoMTurkCSVFormatter {
 		Scene scene = episode.getScene(sceneId);
 		if(scene == null) return null;
 		
-		Set<String> extra_speakers, ignore_words = getSpeakerSet(scene);
+		List<String> list; Set<String> extra_speakers, ignore_words = getSpeakerSet(scene);
 		ignore_words = ignore_words.stream().map(spk->StringUtils.toLowerCase(spk)).collect(Collectors.toSet());
 		ignore_words.addAll(ign_referants);
 		
@@ -107,9 +107,10 @@ public class StatementTreetoMTurkCSVFormatter {
 			joiner.add(Integer.toString(sceneId));
 			joiner.add(String.format("\"%s\"", html));
 			
-			for(String speaker : extra_speakers) joiner.add(speaker);
-			for(i = extra_speakers.size(); i < extra_character_count; i++)
-				joiner.add(EMPTY_CHARACTER);
+			list = new ArrayList<>(extra_speakers);
+			for(i = 0; i < list.size() && i < extra_character_count; i++) 
+				joiner.add(list.get(i));
+			for(; i < extra_character_count; i++) 	joiner.add(EMPTY_CHARACTER);
 			
 			for(i = 0; i < Math.min(questions.size(), q_ub); i++)
 				joiner.add(String.format(ENTRY_QUESTION_FROMAT, i+1, questions.get(i)));
@@ -211,7 +212,7 @@ public class StatementTreetoMTurkCSVFormatter {
 					if(speaker == null) html.append("<tr><td><b></b></td><td>");
 					else html.append(String.format("<tr><td><b>%s:</b></td><td>", speaker));
 					
-					html.append(line.toString());
+					html.append(String.format("%s</td></tr>", line.toString()));
 				}
 			}
 		}
@@ -226,8 +227,11 @@ public class StatementTreetoMTurkCSVFormatter {
 		speakers.removeAll(ign_speakers);
 		speakers.remove(StringConst.EMPTY);
 		
+		String speaker_low;
 		for(String speaker : speakers){
-			if(!speaker.contains(" and "))
+			speaker_low = StringUtils.toLowerCase(speaker);
+			if(!speaker_low.contains(" and ") && !speaker_low.contains(StringConst.COMMA) &&  
+				!speaker_low.contains(StringConst.FW_SLASH) && !speaker_low.contains(StringConst.AMPERSAND))
 				set.add(speaker.replaceAll(REGEX_PARATHESE, StringConst.EMPTY).trim());
 		}
 		return set;

@@ -17,6 +17,7 @@ package edu.emory.mathcs.nlp.mining.character.structure;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.TreeMap;
 
 /**
@@ -24,7 +25,7 @@ import java.util.TreeMap;
  * @version	1.0
  * @since 	Mar 8, 2016
  */
-public class Season implements Serializable, Comparable<Season>{
+public class Season implements Serializable, Comparable<Season>, Iterable<Episode>{
 	private static final long serialVersionUID = 7067132737364878689L;
 	
 	private int season_id;
@@ -67,6 +68,11 @@ public class Season implements Serializable, Comparable<Season>{
 	@Override
 	public int compareTo(Season o) {
 		return getID() - o.getID();
+	}
+
+	@Override
+	public Iterator<Episode> iterator() {
+		return episodes.values().iterator();
 	}
 
 }

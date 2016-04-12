@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.emory.mathcs.nlp.mining.character.script.bigbang;
+package edu.emory.mathcs.nlp.mining.character.script.friends;
 
 import edu.emory.mathcs.nlp.mining.character.script.util.nlp4j.NLP4JtoStatementTreeProcessor;
 
@@ -24,8 +24,8 @@ import edu.emory.mathcs.nlp.mining.character.script.util.nlp4j.NLP4JtoStatementT
  */
 public class NLP4JtoStatementTreeProcessScript_SpanTagging {
 	public static final String
-		IN_DIR  = "/Users/HenryChen/Desktop/BigBang/season1/original", 			IN_TREE_EXT  = ".dep", 		IN_SPEAKER_EXT = ".spk",
-		OUT_DIR = "/Users/HenryChen/Desktop/BigBang/season1/span_tagged",		OUT_EXT  = ".dep";
+		IN_DIR = "/Users/HenryChen/Desktop/TV_Show_Tanscripts/Friends/season1/original", 			IN_TREE_EXT  = ".dep", 		IN_SPEAKER_EXT = ".spk",
+		OUT_DIR = "/Users/HenryChen/Desktop/TV_Show_Tanscripts/Friends/season1/span_tagged",		OUT_EXT  = ".dep";
 	
 	public static void main(String[] args) throws Exception{
 		NLP4JtoStatementTreeProcessor processor = new NLP4JtoStatementTreeProcessor();
