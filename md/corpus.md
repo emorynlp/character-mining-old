@@ -22,7 +22,7 @@ Example annotations for the above dialogue (Only for the mentions):
 | Big Bang Theory |    1   |      17 |    95 |      31 |     2,425 |     3,302 | 37,154 |      5,019 |
 
 ### Corpus Structures
-The following figure illustrates the structure of our corpus:
+The following figure illustrates the structure of our corpus ([Source code](../src/main/java/edu/emory/mathcs/nlp/mining/character/structure)):
 
 ![Corpus Structure](img/corpus-data-structure.png)
 
@@ -51,7 +51,7 @@ The corpus is available in JSON format including utterances and statementsk thou
 	}
 
 ##### Tab-Separated Values Format (TSV)
-The corpus is available in TSV format. **Only statements are included** for this format. Use with JSON format if action notes are needed. The data is pre-parsed with the [NLP4J](https://github.com/emorynlp/nlp4j) Parser to provide part-of-speech tag, dependency tree structure, and named entity tag information. Date are formatted as shown in the sample below.
+The corpus is available in TSV format. **Only statements are included** for this format. Use with JSON format if action notes are needed. The data is pre-parsed with the [NLP4J](https://github.com/emorynlp/nlp4j) Parser to provide part-of-speech tag, dependency tree structure, and named entity tag information. Each file contains a single scene within an episode of a certain show. Files are named with six digits in the format of `######.tsv` where the first two digits indicates the season number, the middle two digits indicates the episode number, and the last two digits indicates the scene number. Files can be read with provided reader[`Class:SceneTSVReader`](../src/main/java/edu/emory/mathcs/nlp/mining/character/reader/SceneTSVReader.java) in this project Date are formatted as shown in the sample below.
 
 	0	0	1	There	there	EX	speaker=Monica	2	expl	_	O	O
 	0	0	2	's	's	VBZ	_	0	root	_	O	O
