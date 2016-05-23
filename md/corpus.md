@@ -1,4 +1,4 @@
-## Speaker Identification Corpus
+## Character Identification Corpus
 #### Currrent Version: *v1.0*
 
 We introduce a new multiparty conversation transcript corpus wiht annotations of mention referent information with BILOU tags. The corpus is avaliabe in `JSON`, `TSV`, and `CoNLL'12` formats. The followings are examples of annotaions, statistics, and structures of our corpus.
@@ -74,7 +74,7 @@ Information of each column are the following.
 
 1. `u_id`: utterence id.
 2. `s_id`: statement id.
-3. `n_id`: node id (`0` is resversed for root node).
+3. `n_id`: node id (`0` is reserved for root node).
 4. `form`: word form.
 5. `lemma`: lemma.
 6. `pos`: part-of-speech tag.
