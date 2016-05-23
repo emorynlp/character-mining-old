@@ -4,7 +4,7 @@
 We introduce a new multiparty conversation transcript corpus wiht annotations of mention referent information with BILOU tags. The corpus is avaliabe in `JSON`, `TSV`, and `CoNLL'12` formats. The followings are examples of annotaions, statistics, and structures of our corpus.
 
 #### Task Illustration and Example
-![Task Illustration and Example](img/character-identification-example.pdf)
+![Task Illustration and Example](img/character-identification-example.png)
 Example annotations for the above dialogue (Only for the mentions):
 	
 	I		U-Ross
@@ -24,7 +24,7 @@ Example annotations for the above dialogue (Only for the mentions):
 ### Corpus Structures
 The following figure illustrates the structure of our corpus:
 
-![Corpus Structure](img/corpus-data-structure.pdf)
+![Corpus Structure](img/corpus-data-structure.png)
 
 Each season is divided into episodes, and each episode is divided into scenes based on the boundary information provided by the transcripts. Each scene is divided into utterances where each utterance belongs to a speaker (e.g., *the scene in Figure 1 includes four utterances*). Each utterance consists of one or more sentences that may or may not contain action notes enclosed by parentheses (e.g., *Ross stares at her in surprise*). A sentence with its action note(s) removed is defined as a statement.
 
